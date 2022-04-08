@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/y30"
+        android:background="@drawable/shape_white_rect_lr_30"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y40"
+                android:drawableStart="@drawable/shape_order"
+                android:drawablePadding="@dimen/x10"
+                android:text="更多功能"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_14_sp" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/x10"
+                android:src="@mipmap/icon_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/home_slb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/icon_home_2"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="顺路板" />
+
+            <TextView
+                android:id="@+id/home_4s"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/icon_home_1"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="4S名录" />
+
+            <TextView
+                android:id="@+id/home_cdml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/icon_home_5"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="车贷名录" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:drawableStart="@drawable/shape_order"
+            android:drawablePadding="@dimen/x10"
+            android:text="物流发布"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/home_xb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_xb"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="小板下单" />
+
+            <TextView
+                android:id="@+id/home_db"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_db"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="大板下单" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/y30"
+            android:drawableStart="@drawable/shape_order"
+            android:drawablePadding="@dimen/x10"
+            android:text="汽车发布"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/home_esc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_esc"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="二手车发布" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_xc"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="新车发布"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/home_qg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_qg"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="求购发布" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:drawableStart="@drawable/shape_order"
+            android:drawablePadding="@dimen/x10"
+            android:text="名录发布"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/home_ml"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_ml"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="新增4S店" />
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:drawableStart="@drawable/shape_order"
+            android:drawablePadding="@dimen/x10"
+            android:text="汽车查询"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/home_wb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_wb"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="维保查询" />
+
+            <TextView
+                android:id="@+id/home_pz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_pz"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="碰撞查询" />
+
+            <TextView
+                android:id="@+id/home_zh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_zh"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="综合查询" />
+
+            <TextView
+                android:id="@+id/home_xx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_home_xx"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="线下验车师" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

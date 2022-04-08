@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y120"
+    android:paddingStart="@dimen/x30"
+    android:paddingEnd="@dimen/x30">
+
+    <TextView
+        android:id="@+id/item_driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="陈小缯\n(蓝牌斜板)"
+        android:textColor="@color/main_normal_color" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_driver_send1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y10"
+            android:text="空闲"
+            android:textColor="@color/login" />
+
+        <TextView
+            android:id="@+id/item_driver_send2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空闲"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_driver_btn1"
+            android:layout_width="@dimen/x140"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_gradient_red"
+            android:gravity="center"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:text="分配"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/item_driver_btn2"
+            android:layout_width="@dimen/x140"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:text="不可操作"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/item_driver_btn3"
+            android:layout_width="@dimen/x140"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/shape_gradient_blue"
+            android:gravity="center"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:text="取消分配"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13_sp" />
+    </LinearLayout>
+</RelativeLayout>

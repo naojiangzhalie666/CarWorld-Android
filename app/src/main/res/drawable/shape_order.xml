@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 设置固定填充色 -->
+    <solid android:color="@color/order" />
+    <size android:width="3dp" android:height="@dimen/y30"/>
+
+</shape>

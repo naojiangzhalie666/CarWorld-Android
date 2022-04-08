@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/y20"
+    android:paddingBottom="@dimen/y20">
+
+    <ImageView
+        android:id="@+id/item_hot_img"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x60"
+        android:src="@mipmap/icon_logout" />
+
+    <TextView
+        android:id="@+id/item_hot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        android:text="大众"
+        android:textColor="@color/main_normal_color"
+        android:textSize="@dimen/text_size_13_sp" />
+
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/y30"
+        android:drawableStart="@drawable/shape_order"
+        android:drawablePadding="@dimen/x10"
+        android:text="身份证正反面"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:id="@+id/iv_sfz_zm"
+                android:layout_width="150dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_rz_fy" />
+
+            <ImageView
+                android:id="@+id/iv_sfz_zm_zt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_auth_shz"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_sfz_zm_bh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_sfz_zm"
+                android:layout_marginTop="@dimen/y10"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_13_sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/iv_sfz_fm"
+                android:layout_width="150dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_rz_fm" />
+
+            <ImageView
+                android:id="@+id/iv_sfz_fm_zt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_auth_shz"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_sfz_fm_bh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_sfz_fm"
+                android:layout_marginTop="@dimen/y10"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_13_sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/main_bg" />
+
+    <TextView
+        app:drawableStartCompat="@drawable/shape_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/y30"
+        android:drawablePadding="@dimen/x10"
+        android:text="身份证信息"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名："
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <EditText
+            android:id="@+id/et_personal_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_weight="1"
+            android:background="@null"
+            android:maxLength="10"
+            android:gravity="center_vertical"
+            android:hint="请输入身份证姓名"
+            android:paddingStart="@dimen/x20"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_scan" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证："
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <EditText
+            android:id="@+id/et_personal_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入身份证号码"
+            android:textColor="@color/gray"
+            android:digits="1234567890X"
+            android:maxLength="18"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_scan"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="求购信息">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/shape_order"
+                android:drawablePadding="5dp"
+                android:text="基本信息（必填）"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_15_sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginEnd="@dimen/x30"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="车型:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_cx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/x20"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="外观/内饰:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x20"
+                    android:text="外观"
+                    android:textColor="@color/main_normal_color" />
+
+                <EditText
+                    android:id="@+id/tv_ys"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="6"
+                    android:text="不限"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/iv_ys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/x10"
+                    android:src="@mipmap/icon_down" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x20"
+                    android:text="内饰"
+                    android:textColor="@color/main_normal_color" />
+
+                <EditText
+                    android:id="@+id/tv_ns"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="6"
+                    android:text="不限"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/iv_ns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/x10"
+                    android:src="@mipmap/icon_down" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginStart="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="上牌地点:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_spd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择城市"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginStart="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提车距离:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_tcjl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择距离"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginStart="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="区域要求:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_qyyq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择区域要求"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginStart="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="求购有效期:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_ccrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择求购有效期"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginLeft="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="车龄:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_cl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择车龄"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginStart="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="实际公里数:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_gls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择公里数"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/shape_order"
+                android:drawablePadding="5dp"
+                android:text="特殊要求（选填）"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_15_sp"
+                android:visibility="gone" />
+
+
+            <include layout="@layout/layout_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="期望价格:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/tv_qwje_min"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:digits="1234567890."
+                    android:gravity="center_vertical|end"
+                    android:hint="最小价格"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/tv_qwje_max"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:digits="1234567890."
+                    android:gravity="center_vertical|end"
+                    android:hint="最大价格"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="万"
+                    android:textColor="@color/main_normal_color" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="公司选择:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_gs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择已认证的公司"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/y10"
+                android:paddingStart="@dimen/x30"
+                android:paddingTop="@dimen/y10"
+                android:paddingEnd="@dimen/x30">
+
+
+                <CheckBox
+                    android:id="@+id/ck_water"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/button_normal_checkbox"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center"
+                    android:text="无泡水"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <CheckBox
+                    android:id="@+id/ck_fire"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/button_normal_checkbox"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center"
+                    android:text="无火烧"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <CheckBox
+                    android:id="@+id/ck_accident"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/button_normal_checkbox"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center"
+                    android:text="无重大事故"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+
+                <CheckBox
+                    android:id="@+id/ck_complete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/button_normal_checkbox"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center"
+                    android:text="手续齐全"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="10dp"
+                android:text="文字备注:"
+                android:textColor="@color/main_normal_color"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/et_ck"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y160"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_button_gray"
+                android:gravity="top"
+                android:hint="请输入求购要求"
+                android:padding="10dp"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_go"
+                android:layout_width="@dimen/x400"
+                android:layout_height="@dimen/y80"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/y60"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_button_red_bg"
+                android:text="发布信息"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/toolbar"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleSize="@dimen/text_size_16_sp"
+    app:titleText="车友圈">
+
+
+    <RelativeLayout
+        android:id="@+id/llyt_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title"
+        android:background="@color/white"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30">
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableStart="@mipmap/ic_location"
+            android:drawablePadding="@dimen/x10"
+            android:gravity="center_vertical"
+            android:text="全国" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_toEndOf="@id/tv_city"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_bg_gray"
+                android:drawableStart="@mipmap/icon_find_gray"
+                android:drawablePadding="@dimen/x10"
+                android:ellipsize="end"
+                android:hint="可搜索品牌及车系"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/x20"
+                android:textSize="@dimen/text_size_13_sp" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/tv_search_btn"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x40"
+            android:background="@drawable/shape_button_red_bg"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12_sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:recyclerBackgroundColor="@color/white"
+            app:recyclerScrollbarNone="true"
+            app:recyclerScrollbarStyle="outsideOverlay" />
+
+        <ImageView
+            android:id="@+id/btn_mc"
+            android:layout_width="@dimen/x190"
+            android:layout_height="@dimen/y60"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y140"
+            android:text="出售"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

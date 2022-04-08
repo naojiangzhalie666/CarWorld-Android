@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--    <com.qmuiteam.qmui.widget.QMUITopBar-->
+    <!--        android:id="@+id/topbar"-->
+    <!--        style="@style/GCTopBar2"-->
+    <!--        app:qmui_topbar_left_back_drawable_id="@mipmap/icon_back"-->
+    <!--        app:qmui_topbar_title_container_padding_horizontal="20dp"-->
+    <!--        app:qmui_topbar_title_gravity="center" />-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/x10"
+            android:src="@mipmap/icon_back2" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="4S名录"
+            android:textColor="@color/main_normal_deep_color"
+            android:textSize="@dimen/text_size_14_sp" />
+
+        <TextView
+            android:id="@+id/btn_function"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:layout_height="@dimen/y44"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_button_red_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:text="新增品牌"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_11_sp" />
+    </RelativeLayout>
+
+
+    <com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:bb_delay="2"
+        app:bb_indicatorCornerRadius="2dp"
+        app:bb_indicatorHeight="1dp"
+        app:bb_indicatorWidth="10dp"
+        app:bb_scale="0.37"
+        app:bl_centerScale="1.0" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xuexiang.xui.widget.spinner.DropDownMenu
+            android:id="@+id/ddm_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:ddm_dividerColor="@color/main_bg"
+            app:ddm_dividerWidth="1dp"
+            app:ddm_menuBackgroundColor="@color/white"
+            app:ddm_menuSelectedIcon="@mipmap/icon_px_down"
+            app:ddm_menuTextSelectedColor="@color/order"
+            app:ddm_menuTextUnselectedColor="@color/main_normal_color"
+            app:ddm_menuUnselectedIcon="@mipmap/icon_px_up" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y2"
+            android:background="@color/main_bg" />
+
+        <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ddm_content"
+            android:paddingTop="5dp"
+            app:recyclerBackgroundColor="@color/main_bg"
+            app:recyclerScrollbarNone="true"
+            app:recyclerScrollbarStyle="outsideOverlay" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

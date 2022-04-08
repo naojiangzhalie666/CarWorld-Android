@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.liansheng.carworld">
+    <!-- <queries> -->
+    <!-- <package android:name="com.tencent.mm" />// 指定微信包名 -->
+    <!-- </queries> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" /> <!-- 补偿通道小米PUSH使用，不用可去除 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 补偿通道GCM使用，不使用可去除 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- 允许监听启动完成事件 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 允许task重排序 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+<!--    <uses-feature android:name="android.hardware.camera" />-->
+<!--    <uses-feature android:name="android.hardware.camera.autofocus" />-->
+
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 需要使用Feature -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:allowBackup">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/Theme.MyAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--                android:host="liansheng.com"-->
+                <data android:scheme="wzlschejie" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.user.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.user.LoginYzmActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChooseLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultCityPickerTheme" />
+        <activity
+            android:name=".activity.OrderSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePswActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ChooseCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgetPswActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.AuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.pgyersdk.feedback.FeedbackActivity" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScanIdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InviteListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransportDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AuthChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AuthUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.TransporterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.DirectoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultCityPickerTheme" />
+        <activity
+            android:name=".activity.AddDirectoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.GradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.InvestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.SaleCarListAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.SaleCarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.home.SaleCarDetailsAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.FindCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.FindCarListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ChooseCarAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ChooseCarFctActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ChooseCarSerieActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.user.TestAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.SignAuthAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.AuthQMAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.Auth4SAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.CardListAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ApplyDispatchAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.AuthDispatchAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.CardAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ChooseAreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultCityPickerTheme" />
+        <activity
+            android:name=".activity.me.AdviceAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.CompanyAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.CompanyInfoAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.me.SettingsAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.me.DeleteAccountAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.FindCarDetailsAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.CarPushAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.me.BillAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.CarSelectAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.CarSmallSelectAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.DriverManagerAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.DriverSelectAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.sub.SubMainAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.sub.SubMeAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.sub.SubOrderListAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.sub.SubOrderDetailsAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.company.CompanyManagerAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.OrderPopAct"
+            android:theme="@style/order_pop" />
+        <activity
+            android:name=".activity.company.CompanySettingAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.company.MembersManagerAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.company.MembersDetailsAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.SecondhandSearchAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.SteamAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.company.CarHistoryAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.company.CompanyFindCarAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.company.CompanyFindCarHistoryAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.home.SteamDetailsAct"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.home.DriverEditAct"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.WebViewBtnAct"
+            android:screenOrientation="fullSensor" />
+        <activity android:name=".activity.company.GuaranteeAct" />
+        <activity
+            android:name=".activity.home.SteamDetailsCreateAct"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.home.ScanVinActivity" />
+        <activity android:name=".activity.me.InfoAuthAct" />
+        <activity android:name=".activity.me.IdAuthAct" />
+        <activity android:name=".activity.other.IDCardActivity" />
+        <activity android:name=".activity.me.DriverAuthAct" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a635676c99ea1f43b60056aa4dcb4949" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.liansheng.carworld.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="e4b8fb65ed36324b50402e2f3c9209db" />
+
+        <provider
+            android:name="com.pgyersdk.PgyerProvider"
+            android:authorities="${applicationId}.com.pgyer.provider"
+            android:exported="false" />
+        <!-- 极光推送 start -->
+        <receiver
+            android:name=".push.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.liansheng.carworld" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".push.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <!-- 极光推送 end -->
+
+        <!-- 人脸识别 start -->
+
+        <!--设置相关页面-->
+        <activity android:name=".face.SettingActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme_NoTitle"
+            android:screenOrientation="portrait" />
+
+        <!--采集成功页面-->
+        <activity android:name=".face.CollectionSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_NoTitle" />
+
+        <!-- 活体图像采集界面 -->
+        <activity
+            android:name=".face.FaceLivenessExpActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_NoTitle" />
+
+        <!-- 人脸跟踪采集界面 -->
+        <activity
+            android:name=".face.FaceDetectExpActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_NoTitle" />
+
+        <!-- 质量控制设置界面 -->
+        <activity android:name=".face.QualityControlActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme_NoTitle"
+            android:screenOrientation="portrait" />
+
+        <!-- 质量参数配置界面 -->
+        <activity android:name=".face.QualityParamsActivity"
+            android:theme="@style/Theme_NoTitle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!--安全设备指纹接入 start-->
+        <activity
+            android:name="com.baidu.liantian.LiantianActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent"
+            android:excludeFromRecents="true"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="com.baidu.action.Liantian.VIEW" />
+                <category android:name="com.baidu.category.liantian"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.me.CompanyApplyAct" />
+        <activity android:name=".activity.me.CompanyAuthInfoAct" />
+        <activity android:name=".activity.me.CompanyAuthAct" />
+        <activity android:name=".activity.company.ApplyMembersAct" />
+        <activity android:name=".activity.home.SaleCarOtherActivity" />
+        <activity android:name=".activity.home.IMAct" />
+        <activity android:name=".activity.home.CarLoanAct" />
+        <activity android:name=".activity.home.CarLoanSubmitAct" />
+        <activity android:name=".activity.home.CarLoanResultAct" />
+        <activity android:name=".activity.me.CouponAct" />
+        <activity android:name=".activity.circle.BuyAct" />
+        <activity android:name=".activity.circle.ReleaseAct"
+            />
+        <activity android:name=".activity.circle.HistoryReleaseAct" />
+        <activity android:name=".activity.circle.CircleDetailsAct" />
+        <activity android:name=".activity.circle.MessageAct" />
+
+        <receiver android:name="com.baidu.liantian.LiantianReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.baidu.action.Liantian.VIEW" />
+                <category android:name="com.baidu.category.liantian"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!--将com.baidu.idl.face.demo替换成您工程的包名-->
+        <provider android:authorities="com.liansheng.carworld.liantian.ac.provider" android:name="com.baidu.liantian.LiantianProvider" android:exported="true"/>
+
+        <service
+            android:name="com.baidu.liantian.LiantianService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.baidu.action.Liantian.VIEW" />
+                <category android:name="com.baidu.category.liantian"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data android:name="seckey_avscan" android:value= "660346260f8a841a04ec2a56815b421b"/>
+        <meta-data android:name="appkey_avscan" android:value= "100034"/>
+        <!-- 人脸识别 end -->
+    </application>
+
+</manifest>

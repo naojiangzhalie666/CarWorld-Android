@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="认证">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y50"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@drawable/shape_white_rect_10"
+        android:elevation="@dimen/y6"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x10"
+        android:paddingTop="@dimen/y20"
+        android:paddingEnd="@dimen/x20"
+        android:paddingBottom="@dimen/y20">
+
+        <ImageView
+            android:layout_width="@dimen/x64"
+            android:layout_height="@dimen/x64"
+            android:paddingStart="@dimen/x10"
+            android:src="@mipmap/ic_info_sm" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实名认证"
+                android:textColor="@color/main_normal_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:layout_marginEnd="@dimen/x30"
+                android:text="完成个人实名认证、人脸识别"
+                android:textSize="@dimen/text_size_12_sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_person"
+                android:layout_width="@dimen/x140"
+                android:layout_height="@dimen/y50"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_gradient_blue"
+                android:gravity="center"
+                android:text="认证"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15_sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/info_person_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_status_pass"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y50"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@drawable/shape_white_rect_10"
+        android:elevation="@dimen/y6"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x10"
+        android:paddingTop="@dimen/y20"
+        android:paddingEnd="@dimen/x20"
+        android:paddingBottom="@dimen/y20">
+
+        <ImageView
+            android:layout_width="@dimen/x64"
+            android:layout_height="@dimen/x64"
+            android:paddingStart="@dimen/x10"
+            android:src="@mipmap/ic_info_qy" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业认证"
+                android:textColor="@color/main_normal_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:layout_marginEnd="@dimen/x30"
+                android:text="上传营业执照认证企业、认证成功后可获得认证标识，新车汽贸店二手车汽贸店4S店、物流公司认证入口"
+                android:textSize="@dimen/text_size_12_sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_company"
+                android:layout_width="@dimen/x140"
+                android:layout_height="@dimen/y50"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_gradient_blue"
+                android:gravity="center"
+                android:text="认证"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15_sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/info_company_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_status_pass"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y50"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@drawable/shape_white_rect_10"
+        android:elevation="@dimen/y6"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x10"
+        android:paddingTop="@dimen/y20"
+        android:paddingEnd="@dimen/x20"
+        android:paddingBottom="@dimen/y20">
+
+        <ImageView
+            android:layout_width="@dimen/x64"
+            android:layout_height="@dimen/x64"
+            android:paddingStart="@dimen/x10"
+            android:src="@mipmap/ic_info_sj" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="司机认证"
+                android:textColor="@color/main_normal_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:layout_marginEnd="@dimen/x30"
+                android:text="上传行驶证、交强险、商业险等证件"
+                android:textSize="@dimen/text_size_12_sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_driver"
+                android:layout_width="@dimen/x140"
+                android:layout_height="@dimen/y50"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_gradient_blue"
+                android:gravity="center"
+                android:text="认证"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15_sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/info_driver_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_status_pass"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

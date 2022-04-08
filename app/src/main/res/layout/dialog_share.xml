@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_rect_lr_10"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/y20"
+        android:paddingBottom="@dimen/y20">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y10"
+            android:text="—— 分享到 ——"
+            android:textColor="@color/gray" />
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/x20"
+            android:padding="@dimen/x10"
+            android:src="@mipmap/icon_close" />
+
+        <TextView
+            android:id="@+id/message"
+            android:textSize="@dimen/text_size_13_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/y20"
+            android:gravity="center"
+            android:text=""/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message"
+            android:layout_marginTop="@dimen/y30"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/share_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x60"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_share_wx"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="微信" />
+
+            <TextView
+                android:id="@+id/share_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x60"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_share_circle"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="朋友圈" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

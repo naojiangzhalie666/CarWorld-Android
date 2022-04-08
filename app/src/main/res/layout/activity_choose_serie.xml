@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_button" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:background="@color/main_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x30"
+        android:text="手自动档"
+        android:textColor="@color/main_normal_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y20"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x60"
+        android:paddingStart="@dimen/x30">
+
+        <TextView
+            android:id="@+id/type_1"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y70"
+            android:background="@drawable/shape_button_gray"
+            android:gravity="center"
+            android:text="手动"
+            android:textColor="@color/main_normal_color" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/type_2"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x60"
+            android:background="@drawable/shape_button_gray"
+            android:gravity="center"
+            android:text="自动"
+            android:textColor="@color/main_normal_color" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/type_3"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x60"
+            android:background="@drawable/shape_button_gray"
+            android:gravity="center"
+            android:textColor="@color/main_normal_color"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@color/main_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x30"
+        android:text="排量"
+        android:textColor="@color/main_normal_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pl_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y20"
+        android:paddingStart="@dimen/x30" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>

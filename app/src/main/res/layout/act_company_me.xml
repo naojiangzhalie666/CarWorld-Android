@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="我的公司">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_qm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y40"
+        android:drawableStart="@drawable/shape_order"
+        android:drawablePadding="@dimen/x10"
+        android:text="汽贸店"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ll_qm"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30">
+
+        <ImageView
+            android:id="@+id/sign_auth_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x80"
+            android:layout_marginStart="@dimen/x20"
+            android:src="@mipmap/ic_auth_qm" />
+
+        <TextView
+            android:id="@+id/tv_company_qm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img1"
+            android:text="温州轩盛汽车服务有限公司"
+            android:textColor="@color/main_normal_color" />
+
+        <TextView
+            android:id="@+id/tv_company_qm_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_company_qm"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img1"
+            android:text="主营新车，顺带二手车"
+            android:textColor="@color/gray" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_wl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y40"
+        android:drawableStart="@drawable/shape_order"
+        android:drawablePadding="@dimen/x10"
+        android:text="物流"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ll_wl"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30">
+
+        <ImageView
+            android:id="@+id/sign_auth_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x80"
+            android:layout_marginStart="@dimen/x20"
+            android:src="@mipmap/ic_auth_sj" />
+
+        <TextView
+            android:id="@+id/tv_company_wl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img2"
+            android:text=""
+            android:textColor="@color/main_normal_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_company_wl"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img2"
+            android:text="调度公司"
+            android:textColor="@color/gray" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_4s"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y40"
+        android:drawableStart="@drawable/shape_order"
+        android:drawablePadding="@dimen/x10"
+        android:text="4S店"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ll_4s"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:paddingBottom="@dimen/y20">
+
+        <ImageView
+            android:id="@+id/sign_auth_img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x30"
+            android:layout_marginStart="@dimen/x20"
+            android:src="@mipmap/ic_auth_4s" />
+
+
+        <TextView
+            android:id="@+id/tv_company_4s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img3"
+            android:text=""
+            android:textColor="@color/main_normal_color" />
+
+        <TextView
+            android:id="@+id/tv_company_4s_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_company_4s"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img3"
+            android:textColor="@color/gray" />
+
+    </RelativeLayout>
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

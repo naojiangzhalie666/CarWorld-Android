@@ -1,0 +1,194 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.mob.sdk'
+
+def getTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+        applicationId "com.liansheng.carworld"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 25
+        versionName "1.5.2"
+        multiDexEnabled true
+        android.compileOptions.sourceCompatibility 1.8
+        android.compileOptions.targetCompatibility 1.8
+        aaptOptions.cruncherEnabled = false//
+        aaptOptions.useNewCruncher = false//
+        renderscriptTargetApi 17
+        renderscriptSupportModeEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86"//"armeabi",, "x86_64"
+        }
+        sourceSets {
+            main {
+//                jniLibs.srcDirs = ['libs']
+            }
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "5ee34cccefb1903dd03505af", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'com.liansheng.carworld'
+            keyPassword 'wzls123456'
+            storeFile file('CarWorld.jks')
+            storePassword 'wzls123456'
+        }
+        release {
+            keyAlias 'com.liansheng.carworld'
+            keyPassword 'wzls123456'
+            storeFile file('CarWorld.jks')
+            storePassword 'wzls123456'
+        }
+    }
+    buildTypes {
+        debug {
+            //是否混淆
+            minifyEnabled false
+//            zipAlignEnabled true
+            shrinkResources false
+        }
+        release {
+            //混淆
+            minifyEnabled true
+//            zipAlignEnabled true//内存对齐
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name.equals('release')) {
+                outputFileName = "CarWorld_v${defaultConfig.versionName}_${getTime()}.apk"
+            } else if (variant.buildType.name.equals('debug')) {
+                outputFileName = "CarWorld_debug_v${defaultConfig.versionName}.apk"
+            }
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+MobSDK {
+    appKey "31f08eda1de89"
+    appSecret "4e8f1f2ed52057583a68ba1967f117b2"
+    MobPush {}
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':library')
+    implementation project(':ocr_ui')
+    implementation project(':faceplatform-ui')
+//    implementation project(':tuikit')
+//    implementation project(':face')
+    implementation files('libs/commons.jar')
+    implementation files('libs/pgyer_sdk_3.0.10.jar')
+    implementation files('libs/ocrsdk.aar')
+    implementation(name: 'quicklogin_libary-external-release-3.0.3', ext: 'aar')
+    implementation(name: 'CMCCSSOSDK-WY-release', ext: 'aar')
+    implementation(name: 'Ui-factory_oauth_mobile_3.9.1.8', ext: 'aar')
+    implementation(name: 'CTAccount_sdk_api_v3.8.3_all_wy', ext: 'aar')
+    implementation(name: 'base-sdk-libary-release', ext: 'aar')
+    //oss上传服务
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.5'
+//    implementation 'com.pgyersdk:sdk:3.0.10'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.qmuiteam:qmui:2.0.0-alpha10'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.github.fodroid:XDroid-Base:v1.5.2'
+    implementation 'com.github.limedroid:ARecyclerView:v1.2.1'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.jpeng:JPTabBar:1.4.0'
+//    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'pub.devrel:easypermissions:2.0.1'
+    implementation 'com.github.xuexiangjys:XUI:1.1.5'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.zaaach:citypicker:2.0.3'
+    //noinspection GradleCompatible
+//    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.github.lzjin:SideBarView:1.0'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.belerweb:pinyin4j:2.5.1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.0'
+    implementation 'com.kongzue.dialog_v3x:dialog:3.2.4'
+    implementation 'com.xgr.easypay:EasyPay:2.0.5'   // 基类库，必选
+    implementation 'com.xgr.easypay:wechatpay:2.0.5' // 微信支付，可选
+    implementation 'com.xgr.easypay:alipay:2.0.5'    // 支付宝支付，可选
+    //识别
+    implementation 'com.shouzhong:Scanner:1.1.3'
+    implementation 'com.shouzhong:ScannerIdCardLib:1.0.4'
+    implementation 'com.shouzhong:ScannerTextLib:1.0.0'
+//    implementation 'com.shouzhong:ScannerDrivingLicenseLib:1.0.0'
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.7'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.8.0'
+    implementation 'me.wangyuwei:LoadingiVew:1.0.5'
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+    implementation 'com.gitee.Zerlings:SmartSpinner:0.2.2'
+    implementation 'com.kunminx.linkage:linkage-recyclerview:2.3.5'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:4.0.6'  // 此处以JPush 4.0.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.8.2'  // 此处以JCore 2.8.2 版本为例。
+    //绘图
+//    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库）
+    implementation "com.umeng.umsdk:common:9.4.0"
+    implementation "com.umeng.umsdk:asms:1.2.3" // asms包依赖(必选)
+// 下面各SDK根据宿主App是否使用相关业务按需引入。
+//    implementation "com.umeng.umsdk:abtest:x.x.x" // ABTest功能依赖(可选)
+    implementation "com.umeng.umsdk:apm:1.3.1" // 应用性能监控SDK依赖(可选)
+//    implementation "com.umeng.umsdk:game:x.x.x" // 游戏统计SDK依赖(可选)
+
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'androidx.fragment') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '1.1.0-alpha08'
+            }
+        }
+    }
+}

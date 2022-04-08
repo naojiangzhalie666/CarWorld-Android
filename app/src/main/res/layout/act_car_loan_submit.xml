@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x30"
+                android:src="@drawable/icon_back" />
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:id="@+id/header"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/x15"
+                android:layout_marginTop="@dimen/y40"
+                android:layout_marginBottom="@dimen/y20"
+                android:src="@mipmap/header"
+                app:qmui_border_color="@color/white"
+                app:qmui_corner_radius="60dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_loan_pa" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginStart="@dimen/x60"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_marginEnd="@dimen/x60"
+            android:background="@drawable/shape_button_gray45"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y80"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x30"
+                android:text="公司名："
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <TextView
+                android:id="@+id/loan_company_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y80"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x30"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_13_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginStart="@dimen/x60"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_marginEnd="@dimen/x60"
+            android:background="@drawable/shape_button_gray45"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y80"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x30"
+                android:text="用户名："
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <TextView
+                android:id="@+id/loan_username"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y80"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x30"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_13_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y2"
+                android:layout_weight="1"
+                android:background="@color/order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x40"
+                android:layout_marginEnd="@dimen/x40"
+                android:text="以下填写贷款人信息"
+                android:textColor="@color/color_333"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y2"
+                android:layout_weight="1"
+                android:background="@color/order" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x60"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_marginEnd="@dimen/x60"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/loan_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@drawable/shape_button_gray45"
+                android:gravity="center_vertical"
+                android:hint="贷款人姓名"
+                android:maxLength="20"
+                android:paddingStart="@dimen/x30"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_14_sp" />
+
+
+            <EditText
+                android:id="@+id/loan_id_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginTop="@dimen/y30"
+                android:background="@drawable/shape_button_gray45"
+                android:gravity="center_vertical"
+                android:hint="贷款人姓名身份证号码"
+                android:maxLength="18"
+                android:digits="1234567890X"
+                android:paddingStart="@dimen/x30"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_14_sp" />
+
+
+            <EditText
+                android:id="@+id/loan_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginTop="@dimen/y30"
+                android:background="@drawable/shape_button_gray45"
+                android:gravity="center_vertical"
+                android:hint="贷款人手机号码"
+                android:maxLength="11"
+                android:paddingStart="@dimen/x30"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_14_sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_marginTop="@dimen/y30"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/loan_code"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y80"
+                    android:layout_weight="2"
+                    android:background="@drawable/shape_button_gray45"
+                    android:gravity="center_vertical"
+                    android:hint="请输入验证码"
+                    android:maxLength="6"
+                    android:paddingStart="@dimen/x30"
+                    android:textColor="@color/color_666"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+                    android:id="@+id/loan_getcode"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y80"
+                    android:layout_marginStart="@dimen/x30"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_gradient_red"
+                    android:text="获取验证码"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x60"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交代表您同意"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <TextView
+                android:id="@+id/loan_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="《智融合伙人注册协议》"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_size_13_sp" />
+        </LinearLayout>
+
+
+        <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginTop="@dimen/y10"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@drawable/shape_gradient_red"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17_sp" />
+
+        <ImageView
+            android:background="@color/main_bg"
+            android:paddingTop="@dimen/y60"
+            android:layout_marginTop="@dimen/y30"
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_loan_bg"
+            android:adjustViewBounds="true"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

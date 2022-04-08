@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:rightColor="@color/main_normal_color"
+    app:titleText="积分">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:background="@mipmap/bg_grade"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无界积分"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/tv_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            />
+        <Button
+            android:id="@+id/btn_dh"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/icon_dh"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y1"
+        android:layout_marginBottom="@dimen/y30"
+        android:background="@color/order" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="车无界积分规则"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/order"
+        android:textSize="@dimen/text_size_14_sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新人注册赠送3个月会员\n会员可通过以下方式获得积分，积分可兑换会员时效\n100积分=1个月会员\n1、邀请5个好友注册，获得300积分\n2、公开分享至朋友圈3天，获得300积分\n3、协助平台纠错，获得100积分\n4、物流版块成功下单，获得100积分"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_13_sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一次最多兑换6个月会员"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/seagreen"
+        android:textSize="@dimen/text_size_13_sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        >
+    <TextView
+        android:id="@+id/tv_yqfx"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@mipmap/icon_yqfx"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/text_size_14_sp" />
+    <TextView
+        android:id="@+id/tv_cz"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@mipmap/icon_cz"
+        android:textSize="@dimen/text_size_14_sp" />
+    </LinearLayout>
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

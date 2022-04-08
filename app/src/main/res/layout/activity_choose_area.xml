@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y600" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginEnd="@dimen/x20"
+        android:background="@drawable/shape_white_rect_10"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y90"
+            android:background="@color/white"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x10">
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:drawableStart="@mipmap/ic_location"
+                android:drawablePadding="@dimen/x10"
+                android:gravity="center_vertical"
+                android:text="全国" />
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_marginTop="@dimen/y5"
+                android:layout_marginBottom="@dimen/y5"
+                android:layout_toEndOf="@id/tv_city"
+                android:background="@drawable/shape_bg_gray"
+                android:drawableStart="@mipmap/icon_find_gray"
+                android:drawablePadding="@dimen/x10"
+                android:ellipsize="end"
+                android:hint="请输入详细地址"
+                android:lines="1"
+                android:paddingStart="@dimen/x20"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_toStartOf="@id/confirm"
+                android:src="@mipmap/icon_clear"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:background="@drawable/shape_button_red_bg"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12_sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--    <com.amap.api.maps.MapView-->
+    <!--        android:id="@+id/map"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="200dp"-->
+    <!--         />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/map"
+        android:background="@color/gray_bg" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/share_kf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/x60"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:src="@mipmap/icon_called" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系客服"
+            android:textSize="@dimen/text_size_12_sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="平安车抵贷"
+        android:textColor="@color/order"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客户扫码成功放款即可获得推荐费"
+        android:textColor="@color/color_666" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y20"
+        android:src="@mipmap/ic_loan_pa_bg" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/y60"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+            android:id="@+id/share_wx"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/y70"
+            android:gravity="center"
+            android:background="@drawable/shape_gradient_red"
+            android:text="分享至微信"
+            android:textColor="@color/white" />
+
+        <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+            android:layout_marginStart="@dimen/x60"
+            android:id="@+id/home"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/y70"
+            android:background="@drawable/shape_gradient_blue"
+            android:gravity="center"
+            android:text="返回上一页"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

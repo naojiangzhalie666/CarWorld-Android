@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyt_search"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@+id/title"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_bg_gray"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="请输入要搜索的车型信息"
+        android:lines="1"
+        android:paddingLeft="45dp"
+        android:paddingRight="60dp"
+        android:textSize="14dp"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35dp"
+        android:src="@mipmap/icon_find_gray" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/shape_button_red_bg"
+        android:text="搜索"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+</RelativeLayout>

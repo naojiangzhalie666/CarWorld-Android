@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginEnd="@dimen/x30"
+        android:layout_marginBottom="@dimen/y20"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:background="@mipmap/ic_coupon_bg">
+
+        <TextView
+            android:id="@+id/item_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100元优惠券"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_amount"
+            android:textColor="#99FFFFFF"
+            android:textSize="@dimen/text_size_13_sp"
+            android:text="2021年1月到底" />
+
+        <ImageView
+            android:id="@+id/item_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_coupon_btn" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

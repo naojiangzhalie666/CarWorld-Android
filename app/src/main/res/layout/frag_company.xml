@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/topbar"
+        style="@style/GCTopBar2"
+        android:layout_marginTop="@dimen/y20"
+        app:qmui_topbar_title_container_padding_horizontal="20dp"
+        app:qmui_topbar_title_gravity="center" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/company_type_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x30"
+                    android:layout_marginTop="@dimen/y20"
+                    android:layout_marginEnd="@dimen/x30"
+                    android:background="@drawable/shape_white_rect_10"
+                    android:paddingStart="@dimen/x20"
+                    android:paddingTop="@dimen/y20"
+                    android:paddingEnd="@dimen/x20"
+                    android:paddingBottom="@dimen/y20"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/company_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:id="@+id/company_address"
+                        android:layout_width="@dimen/x360"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/company_name"
+                        android:layout_marginTop="@dimen/y10"
+                        android:drawableStart="@mipmap/ic_location"
+                        android:drawablePadding="@dimen/x10"
+                        android:gravity="top"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/company_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/company_address"
+                        android:layout_marginTop="@dimen/y10"
+                        android:drawableStart="@mipmap/ic_info_gs"
+                        android:drawablePadding="@dimen/x10"
+                        android:text=""
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/company_zy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/company_type"
+                        android:layout_marginTop="@dimen/y10"
+                        android:drawableStart="@mipmap/ic_zy"
+                        android:drawablePadding="@dimen/x10"
+                        android:text="未填写"
+                        android:textColor="@color/gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/ll_company_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/x15"
+                        android:layout_marginEnd="@dimen/x20">
+
+                        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                            android:layout_width="@dimen/x110"
+                            android:layout_height="@dimen/x110"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/y20"
+                            android:src="@mipmap/ic_store_default"
+                            app:qmui_border_color="@color/white"
+                            app:qmui_corner_radius="60dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/ic_info_vip" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/company_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_company_img"
+                        android:layout_marginTop="@dimen/y20"
+                        android:layout_marginEnd="@dimen/x10"
+                        android:layout_toStartOf="@id/company_tv2"
+                        android:background="@drawable/shape_red_rect_stroke_45"
+                        android:paddingStart="@dimen/x10"
+                        android:paddingTop="@dimen/y4"
+                        android:paddingEnd="@dimen/x10"
+                        android:paddingBottom="@dimen/y4"
+                        android:text="营业执照"
+                        android:textColor="@color/order"
+                        android:textSize="@dimen/text_size_10_sp" />
+
+                    <TextView
+                        android:id="@+id/company_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_company_img"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/y20"
+                        android:background="@drawable/shape_blue_rect_stroke_45"
+                        android:paddingStart="@dimen/x10"
+                        android:paddingTop="@dimen/y4"
+                        android:paddingEnd="@dimen/x10"
+                        android:paddingBottom="@dimen/y4"
+                        android:text="身份认证"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/text_size_10_sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/company_type_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/y20"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y160"
+                        android:layout_marginStart="@dimen/x30"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:background="@drawable/shape_white_rect_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/company_car_manager"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableTop="@mipmap/ic_company_car_manager"
+                                android:drawablePadding="@dimen/y10"
+                                android:gravity="center"
+                                android:text="车源管理"
+                                android:textSize="@dimen/text_size_13_sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/company_member_manager"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableTop="@mipmap/ic_company_member"
+                                android:drawablePadding="@dimen/y10"
+                                android:gravity="center"
+                                android:text="人员管理"
+                                android:textSize="@dimen/text_size_13_sp" />
+
+                            <TextView
+                                android:id="@+id/company_member_count"
+                                android:layout_width="@dimen/x30"
+                                android:layout_height="@dimen/x30"
+                                android:layout_marginStart="-15dp"
+                                android:layout_marginTop="@dimen/y16"
+                                android:layout_toEndOf="@id/company_member_manager"
+                                android:background="@drawable/shape_oval_red"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_11_sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x30"
+                        android:layout_marginTop="@dimen/y20"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:background="@drawable/shape_white_rect_10"
+                        android:paddingStart="@dimen/x30"
+                        android:paddingTop="@dimen/y20"
+                        android:paddingEnd="@dimen/x30"
+                        android:paddingBottom="@dimen/y20">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="公司形象展示"
+                                android:textColor="@color/main_normal_color"
+                                android:textSize="@dimen/text_size_14_sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/x10"
+                                android:text="(长按可删除图片)"
+                                android:textColor="@color/order"
+                                android:textSize="@dimen/text_size_13_sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/company_img_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawableTop="@mipmap/icon_add"
+                            android:text="添加"
+                            android:textColor="@color/main_normal_color"
+                            android:textSize="@dimen/text_size_13_sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginTop="@dimen/y10"
+                            android:id="@+id/company_imgs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/company_img_add" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x30"
+                        android:layout_marginTop="@dimen/y20"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:background="@drawable/shape_white_rect_10"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/y20"
+                        android:paddingBottom="@dimen/y30">
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/x30"
+                            android:text="销量走势"
+                            android:textColor="@color/main_normal_color"
+                            android:textSize="@dimen/text_size_13_sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/x30"
+                            android:text="近半月销售量"
+                            android:textColor="@color/main_normal_color"
+                            android:textSize="@dimen/text_size_12_sp" />
+
+                        <com.liansheng.carworld.view.LineGraphicView
+                            android:id="@+id/line_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y380"
+                            android:layout_below="@id/t1"
+                            android:layout_marginTop="@dimen/y20"
+                            android:paddingTop="@dimen/y10" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/company_type_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/y30"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_company_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x30"
+                        android:layout_marginTop="@dimen/y30"
+                        android:drawableLeft="@drawable/shape_order"
+                        android:drawablePadding="5dp"
+                        android:text="调度订单"
+                        android:textColor="@color/main_normal_color"
+                        android:textSize="@dimen/text_size_15_sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_manager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/y30"
+                        android:layout_marginEnd="@dimen/x30"
+                        android:drawableStart="@mipmap/icon_manager"
+                        android:drawablePadding="@dimen/x10"
+                        android:text="人员管理"
+                        android:textColor="@color/main_normal_color"
+                        android:textSize="@dimen/text_size_14_sp" />
+
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_company_type"
+                        android:background="@android:color/white"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/order"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/order"
+                        app:tabTextAppearance="@style/MyTabText"
+                        app:tabTextColor="@color/black" />
+
+                    <com.liansheng.carworld.view.CWViewPager
+                        android:id="@+id/viewpage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tab_layout"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/company_none_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/bg_bill_none" />
+
+                    <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+                        android:id="@+id/auth"
+                        android:layout_width="@dimen/x300"
+                        android:layout_height="@dimen/y60"
+                        android:layout_below="@id/none"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/y60"
+                        android:background="@drawable/shape_gradient_blue"
+                        android:gravity="center"
+                        android:text="去认证"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

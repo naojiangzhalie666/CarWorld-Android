@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@mipmap/icon_info_1"
+    android:focusable="true"
+    app:titleColor="@color/text_dark"
+    app:titleText="顺路板物流">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginTop="@dimen/y15"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@drawable/shape_bg_white"
+            android:drawableStart="@mipmap/icon_find_gray"
+            android:drawablePadding="@dimen/x20"
+            android:hint="输入目地地或出发地"
+            android:maxLength="10"
+            android:paddingStart="@dimen/x50"
+            android:textSize="@dimen/text_size_13_sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/x30"
+        android:layout_marginBottom="@dimen/y10"
+        android:background="@drawable/shape_home_btn"
+        android:elevation="@dimen/y10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/wl_dfc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/x5"
+            android:text="0\n待发车"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginBottom="@dimen/x20"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/wl_fcz"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/x5"
+            android:text="0\n发车中"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginBottom="@dimen/x20"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/wl_ywc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/x5"
+            android:text="0\n已送达"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12_sp" />
+    </LinearLayout>
+
+
+    <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
+        app:recyclerBackgroundColor="@color/main_bg"
+        app:recyclerScrollbarNone="true"
+        app:recyclerScrollbarStyle="outsideOverlay" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.HomesFragment">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/topbar"
+        style="@style/GCTopBar2"
+        android:visibility="gone"
+        app:qmui_topbar_title_container_padding_horizontal="20dp"
+        app:qmui_topbar_title_gravity="center" />
+
+    <com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bb_delay="3"
+        app:bb_indicatorCornerRadius="2dp"
+        app:bb_indicatorHeight="1dp"
+        app:bb_indicatorWidth="10dp"
+        app:bb_scale="0.42"
+        app:bl_centerScale="1.0" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_marginBottom="@dimen/y20"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:id="@+id/home_item_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button_blue_10"
+            android:drawableTop="@mipmap/icon_home_3"
+            android:drawablePadding="@dimen/y10"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y10"
+            android:text="二手车商交易"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/home_item_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginEnd="@dimen/x30"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button_red_10"
+            android:drawableTop="@mipmap/icon_home_2"
+            android:drawablePadding="@dimen/y10"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y10"
+            android:text="顺路板物流"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <LinearLayout
+            android:id="@+id/home_item_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button_orange_10"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x14"
+                android:src="@mipmap/icon_home_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="4s二网名录"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_13_sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y6"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x40"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_marginEnd="@dimen/x40"
+        android:layout_marginBottom="@dimen/y20"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/home_item_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_home_5"
+            android:drawablePadding="@dimen/y10"
+            android:gravity="center"
+            android:text="车贷名录"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/home_item_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_home_4"
+            android:drawablePadding="@dimen/y10"
+            android:gravity="center"
+            android:text="新车资源"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/text_size_13_sp" />
+
+
+        <TextView
+            android:id="@+id/home_item_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_home_6"
+            android:drawablePadding="@dimen/y10"
+            android:gravity="center"
+            android:text="车险名录"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/home_item_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_home_7"
+            android:drawablePadding="@dimen/y10"
+            android:gravity="center"
+            android:text="茶余饭后"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/text_size_13_sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y6"
+        android:layout_marginBottom="@dimen/y10"
+        android:background="@color/main_bg" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/iv_car"
+                        android:layout_width="@dimen/x104"
+                        android:layout_height="@dimen/x66"
+                        android:src="@drawable/icon_second_car" />
+
+                    <TextView
+                        android:id="@+id/tv_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:drawablePadding="@dimen/x10"
+                        android:text="查看更多"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/text_size_13_sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@mipmap/icon_right_blue" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_command"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginTop="@dimen/y20"
+                    android:paddingEnd="@dimen/x30"
+                    android:paddingBottom="@dimen/y10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y6"
+                    android:background="@color/main_bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10">
+
+                    <ImageView
+                        android:id="@+id/iv_new"
+                        android:layout_width="@dimen/x104"
+                        android:layout_height="@dimen/x66"
+                        android:src="@drawable/icon_new" />
+
+                    <TextView
+                        android:id="@+id/tv_ml"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:drawableEnd="@mipmap/icon_right_red"
+                        android:drawablePadding="@dimen/x10"
+                        android:text="查看更多"
+                        android:textColor="@color/order"
+                        android:textSize="@dimen/text_size_13_sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/y20"
+                        android:overScrollMode="never"
+                        android:paddingEnd="@dimen/x30"
+                        android:paddingBottom="@dimen/y10" />
+                </RelativeLayout>
+
+                <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+                    android:id="@+id/contentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:recyclerBackgroundColor="@color/white"
+                    app:recyclerScrollbarNone="true"
+                    app:recyclerScrollbarStyle="outsideOverlay" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="企业信息">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x30"
+        android:drawableStart="@drawable/shape_order"
+        android:drawablePadding="@dimen/x10"
+        android:text="加入企业"
+        android:textColor="@color/main_normal_color"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_company_auth_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y30">
+
+            <EditText
+                android:id="@+id/et_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@color/transparent"
+                android:drawableStart="@mipmap/icon_find_gray"
+                android:gravity="center"
+                android:hint="请输入公司名"
+                android:maxLength="30"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y4"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y20"
+                android:text="企业管理员审批"
+                android:textColor="#fa9a45"
+                android:textSize="@dimen/text_size_15_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="发送加入申请给企业管理员，审批通过后即可加入该企业"
+                android:textSize="@dimen/text_size_12_sp" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:textColor="@color/main_normal_color"
+                android:textStyle="bold" />
+
+            <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+                android:id="@+id/apply"
+                android:layout_width="@dimen/x160"
+                android:layout_height="@dimen/y60"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@drawable/shape_button_org_bg"
+                android:gravity="center"
+                android:text="立即申请"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/company_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y82" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:drawableStart="@drawable/shape_order"
+        android:drawablePadding="@dimen/x10"
+        android:text="认证企业"
+        android:textColor="@color/main_normal_color"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@mipmap/ic_company_auth_bg2"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/y30"
+        android:paddingBottom="@dimen/y30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="车无界官方审批"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_16_sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y30"
+            android:text="上传营业执照，由车无界运营人员审批通过后即可创建企业"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y30"
+            android:text="请先完成个人认证，再上传营业执照创建企业"
+            android:textColor="@color/order"
+            android:textSize="@dimen/text_size_12_sp" />
+
+        <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y60"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y30"
+            android:background="@drawable/shape_gradient_blue"
+            android:gravity="center"
+            android:paddingStart="@dimen/x30"
+            android:paddingTop="@dimen/y10"
+            android:paddingEnd="@dimen/x30"
+            android:paddingBottom="@dimen/y10"
+            android:text="上传营业执照"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13_sp" />
+
+    </LinearLayout>
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

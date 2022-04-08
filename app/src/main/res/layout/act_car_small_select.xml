@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="小板车选择">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/car_small_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y40"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingEnd="@dimen/x30"
+                android:paddingBottom="@dimen/y20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_car_small"
+                    android:drawablePadding="@dimen/y10"
+                    android:gravity="center"
+                    android:text="不限制"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_10_sp" />
+
+                <!--        <View-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="@dimen/y1"-->
+                <!--            android:layout_weight="1" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不限"
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="载重：3吨"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长宽高：6*3*2.5m       "
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right" />
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <LinearLayout
+                android:id="@+id/car_small_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingEnd="@dimen/x30"
+                android:paddingBottom="@dimen/y20">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_car_small_1"
+                    android:drawablePadding="@dimen/y10"
+                    android:gravity="center"
+                    android:text="适合3吨以下车型"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_10_sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="蓝牌斜板"
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="载重：3吨"
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="底盘高》0.2m"
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长宽高：6*3*2.5m       "
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <LinearLayout
+                android:id="@+id/car_small_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingEnd="@dimen/x30"
+                android:paddingBottom="@dimen/y20">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_car_small_2"
+                    android:drawablePadding="@dimen/y10"
+                    android:gravity="center"
+                    android:text="适合3吨以内跑车或底盘低的车型"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_10_sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="蓝牌落地板"
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="载重：3吨"
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长宽高：6*3*2.5m       "
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <LinearLayout
+                android:id="@+id/car_small_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingEnd="@dimen/x30"
+                android:paddingBottom="@dimen/y20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_car_small_2"
+                    android:drawablePadding="@dimen/y10"
+                    android:gravity="center"
+                    android:text="适合3吨以内跑车或底盘低的车型"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_10_sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="黄牌落地板"
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="载重：3吨"
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长宽高：6*3*2.5m       "
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <LinearLayout
+                android:id="@+id/car_small_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingEnd="@dimen/x30"
+                android:paddingBottom="@dimen/y20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_car_small_3"
+                    android:drawablePadding="@dimen/y10"
+                    android:gravity="center"
+                    android:text="适合5吨以内长轴距面包车、货车"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_10_sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5吨板"
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="载重：6吨"
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长宽高：8*2*2.5m       "
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <LinearLayout
+                android:id="@+id/car_small_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/y20"
+                android:paddingEnd="@dimen/x30"
+                android:paddingBottom="@dimen/y20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_car_small_4"
+                    android:drawablePadding="@dimen/y10"
+                    android:gravity="center"
+                    android:text="适合3吨内豪华车"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_10_sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="厢式车"
+                        android:textColor="@color/main_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="载重：3吨"
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="长宽高：6*3*2.5m       "
+                        android:textSize="@dimen/text_size_10_sp"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

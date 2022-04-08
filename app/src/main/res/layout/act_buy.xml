@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="求购">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y300"
+                android:layout_marginBottom="@dimen/y20"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="@dimen/y30"
+                android:layout_marginEnd="@dimen/x30"
+                android:background="@drawable/shape_circle_bg">
+
+                <EditText
+                    android:id="@+id/input_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="start"
+                    android:hint="请输入求购信息"
+                    android:lines="4"
+                    android:padding="@dimen/x20"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/text_size_13_sp" />
+
+                <TextView
+                    android:id="@+id/input_content_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/x20"
+                    android:layout_marginStart="@dimen/x10"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:layout_marginBottom="@dimen/x10"
+                    android:text="0/100" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="选择地区:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择地区"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/shape_order"
+                android:drawablePadding="@dimen/x10"
+                android:text="重要事项"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_15_sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:lineHeight="20dp"
+                android:text="
+    1、车型品牌填写详细，在利于系统匹配或智能推送。\n
+    2、价格预算和年限要求，有利于全国同行更好帮忙推荐和合作成交。\n
+    3、求购车型图片越真越好，有利于大家更精准匹配。\n
+    4、车源求购圈仅限二手车车辆求购、匹配、互动、合作等信息。\n
+    5、求购信息30天有效，30天后系统将自动下架。\n
+    6、因用户可以百接通过内网系统电话联系到发布者，请不要在备注里留下联系方式或者门店名称，以免市核不通过。\n
+    7、私密信息，无须审核，只有自己可见，长期有效。"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_12_sp" />
+
+
+            <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+                android:id="@+id/btn_go"
+                android:layout_width="@dimen/x640"
+                android:layout_height="@dimen/y80"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/y50"
+                android:layout_marginBottom="@dimen/y40"
+                android:background="@drawable/shape_gradient_red"
+                android:text="发布"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</cn.droidlover.xdroid.views.appbar.ToolBar>

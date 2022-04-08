@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="历史记录">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginTop="@dimen/y15"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@drawable/shape_bg_white"
+            android:drawableStart="@mipmap/icon_find_gray"
+            android:drawablePadding="@dimen/x20"
+            android:hint="请输入品牌、车源编号、VIN进行搜索"
+            android:maxLength="10"
+            android:paddingStart="@dimen/x50"
+            android:textSize="@dimen/text_size_13_sp" />
+    </LinearLayout>
+
+
+    <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y15"
+        app:recyclerBackgroundColor="@color/white"
+        app:recyclerScrollbarNone="true"
+        app:recyclerScrollbarStyle="outsideOverlay" />
+</cn.droidlover.xdroid.views.appbar.ToolBar>

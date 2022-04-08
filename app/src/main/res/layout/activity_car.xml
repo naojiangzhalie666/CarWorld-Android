@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:titleColor="@color/text_dark"
+    app:titleSize="@dimen/text_size_16_sp"
+    app:titleText="二手车商交易">
+
+    <RelativeLayout
+        android:id="@+id/llyt_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30">
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableStart="@mipmap/ic_location"
+            android:drawablePadding="@dimen/x10"
+            android:gravity="center_vertical"
+            android:text="全国" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_toEndOf="@id/tv_city"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_bg_gray"
+                android:drawableStart="@mipmap/icon_find_gray"
+                android:drawablePadding="@dimen/x10"
+                android:ellipsize="end"
+                android:hint="可搜索品牌及车系"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/x20"
+                android:textSize="@dimen/text_size_13_sp" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/tv_search_btn"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x40"
+            android:background="@drawable/shape_button_red_bg"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12_sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_second"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:layout_below="@id/llyt_search"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20">
+
+        <TextView
+            android:id="@+id/home_item_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button_red_10"
+            android:drawablePadding="@dimen/y10"
+            android:elevation="@dimen/y4"
+            android:gravity="center"
+            android:text="全部车源"
+            android:textColor="@color/order"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/home_item_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white_rect_10"
+            android:drawablePadding="@dimen/y10"
+            android:elevation="@dimen/y4"
+            android:gravity="center"
+            android:text="可议价车"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/home_item_3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white_rect_10"
+            android:drawablePadding="@dimen/y10"
+            android:elevation="@dimen/y4"
+            android:gravity="center"
+            android:text="底价车"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/home_item_4"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y70"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white_rect_10"
+            android:drawablePadding="@dimen/y10"
+            android:elevation="@dimen/y4"
+            android:gravity="center"
+            android:text="准新车"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_13_sp" />
+    </LinearLayout>
+
+    <com.xuexiang.xui.widget.spinner.DropDownMenu
+        android:id="@+id/ddm_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_second"
+        android:background="@color/white"
+        app:ddm_dividerColor="@color/main_bg"
+        app:ddm_dividerWidth="1dp"
+        app:ddm_menuBackgroundColor="@color/white"
+        app:ddm_menuSelectedIcon="@mipmap/icon_px_down"
+        app:ddm_menuTextSelectedColor="@color/order"
+        app:ddm_menuTextUnselectedColor="@color/main_normal_color"
+        app:ddm_menuUnselectedIcon="@mipmap/icon_px_up" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ddm_content">
+
+        <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingTop="5dp"
+            app:recyclerBackgroundColor="@color/white"
+            app:recyclerScrollbarNone="true"
+            app:recyclerScrollbarStyle="outsideOverlay" />
+
+        <ImageView
+            android:id="@+id/btn_mc"
+            android:layout_width="@dimen/x190"
+            android:layout_height="@dimen/y60"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y140"
+            android:text="出售"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

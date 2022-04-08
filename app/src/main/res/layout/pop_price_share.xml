@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/x60"
+        android:layout_marginEnd="@dimen/x60"
+        android:background="@drawable/shape_white_rect_10"
+        android:paddingBottom="@dimen/y30">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y20"
+            android:text="分享至微信"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/x5"
+            android:src="@mipmap/icon_close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="@dimen/y40"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pop_share_price1"
+                android:layout_width="@dimen/x170"
+                android:layout_height="@dimen/y90"
+                android:layout_marginEnd="@dimen/x80"
+                android:background="@drawable/shape_gradient_red_10"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x10"
+                android:text="--万\n批发价分享"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/x170"
+                android:layout_height="@dimen/y90"
+                android:background="@drawable/shape_button_blue_10"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/x1"
+                android:paddingEnd="@dimen/x1">
+
+                <EditText
+                    android:id="@+id/pop_input_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:layout_marginEnd="@dimen/x30"
+                    android:background="@color/transparent"
+                    android:digits="1234567890."
+                    android:gravity="center"
+                    android:hint="请输入金额"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/y10"
+                    android:layout_marginEnd="@dimen/x6"
+                    android:text="万"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+                <TextView
+                    android:id="@+id/pop_share_price2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y40"
+                    android:layout_below="@id/pop_input_money"
+                    android:background="@drawable/shape_gradient_blue_blr_10"
+                    android:gravity="center"
+                    android:text="零售价分享"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_13_sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

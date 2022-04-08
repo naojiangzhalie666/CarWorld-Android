@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="企业信息">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/y40"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_company_apply_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y40"
+        android:text="请等待审核"
+        android:textColor="@color/main_normal_color"
+        android:textSize="@dimen/text_size_15_sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y40"
+        android:text="您的申请已提交，以下任一管理员审核通过后，即可加入该企业"
+        android:textColor="@color/main_normal_color"
+        android:textSize="@dimen/text_size_11_sp" />
+
+    <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+        android:id="@+id/cancel"
+        android:layout_width="@dimen/x160"
+        android:layout_height="@dimen/y50"
+        android:layout_marginTop="@dimen/y40"
+        android:background="@drawable/shape_gradient_red"
+        android:gravity="center"
+        android:text="撤销申请"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_13_sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y60"
+        android:text="管理员" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/company_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

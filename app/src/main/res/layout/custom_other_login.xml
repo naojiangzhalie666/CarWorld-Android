@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/back"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/y80"
+        android:background="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y60"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@drawable/shape_gradient_blue">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_marginEnd="@dimen/x10"
+            android:gravity="center"
+            android:text="其他手机登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14_sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

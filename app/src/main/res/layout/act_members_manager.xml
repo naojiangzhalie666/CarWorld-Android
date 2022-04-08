@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="人员管理">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginTop="@dimen/y15"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@drawable/shape_bg_white"
+            android:drawableStart="@mipmap/icon_find_gray"
+            android:drawablePadding="@dimen/x20"
+            android:hint="请输入员工手机号、姓名、进行搜索"
+            android:maxLength="10"
+            android:paddingStart="@dimen/x50"
+            android:textSize="@dimen/text_size_13_sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/member_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x60"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/x60"
+        android:background="@drawable/shape_gradient_blue"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y60"
+            android:drawableStart="@mipmap/ic_member_add"
+            android:drawablePadding="@dimen/x10"
+            android:gravity="center_vertical"
+            android:text="新的员工"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y20" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

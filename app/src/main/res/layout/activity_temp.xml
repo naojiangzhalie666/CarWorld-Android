@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+<!--    <com.qmuiteam.qmui.widget.QMUITopBar-->
+<!--        android:id="@+id/topbar"-->
+<!--        style="@style/GCTopBar2"-->
+<!--        app:qmui_topbar_left_back_drawable_id="@mipmap/icon_back"-->
+<!--        app:qmui_topbar_title_container_padding_horizontal="20dp"-->
+<!--        app:qmui_topbar_title_gravity="center" />-->
+    <include layout="@layout/layout_title"></include>
+</LinearLayout>

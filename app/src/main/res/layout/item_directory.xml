@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/x30"
+    android:layout_marginTop="@dimen/y20"
+    android:layout_marginEnd="@dimen/x30"
+    android:background="@drawable/shape_white_rect_10"
+    android:paddingTop="@dimen/y10"
+    android:paddingBottom="@dimen/y20">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/x340"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="公司"
+        android:textColor="@color/main_normal_color"
+        android:textSize="@dimen/text_size_14_sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/x30"
+        android:text="2021-1-30 12:00"
+        android:textColor="@color/order"
+        android:textSize="12dp" />
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/iv_header"
+        android:layout_width="@dimen/x110"
+        android:layout_height="@dimen/x110"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:src="@mipmap/logo"
+        android:layout_below="@id/tv_name"
+        app:qmui_border_color="@color/white"
+        app:qmui_corner_radius="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/ll_phone"
+        android:layout_below="@id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x30">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="座机"
+            android:textColor="@color/gray"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y40"
+            android:text="手机"
+            android:textColor="@color/gray"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_phone"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_phone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_below="@id/ll_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="@dimen/y10"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="地址"
+        android:textColor="@color/gray"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_below="@id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/x30"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llyt_dz"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.xuexiang.xui.widget.button.shinebutton.ShineButton
+                    android:id="@+id/btn_good"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:sb_allow_random_color="false"
+                    app:sb_big_shine_color="#FF6666"
+                    app:sb_checked_color="@color/order"
+                    app:sb_click_animation_duration="200"
+                    app:sb_enable_flashing="false"
+                    app:sb_icon_image="@mipmap/icon_dz"
+                    app:sb_normal_color="@android:color/darker_gray"
+                    app:sb_shine_animation_duration="1500"
+                    app:sb_shine_count="15"
+                    app:sb_shine_distance_multiple="1.5"
+                    app:sb_shine_turn_angle="10"
+                    app:sb_small_shine_color="#CC9999"
+                    app:sb_small_shine_offset_angle="20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/order"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_dz_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="点赞"
+                android:textColor="@color/gray"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llyt_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.xuexiang.xui.widget.button.shinebutton.ShineButton
+                android:id="@+id/btn_collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:sb_allow_random_color="true"
+                app:sb_checked_color="@color/order"
+                app:sb_enable_flashing="true"
+                app:sb_icon_image="@mipmap/icon_collection"
+                app:sb_normal_color="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="收藏"
+                android:textColor="@color/gray"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyt_jc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/icon_jc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="纠错"
+                android:textColor="@color/gray"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyt_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/icon_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="分享"
+                android:textColor="@color/gray"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout><!--</androidx.cardview.widget.CardView>-->

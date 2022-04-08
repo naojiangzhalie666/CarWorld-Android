@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="@dimen/y10"
+    android:paddingBottom="@dimen/y10">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x30"
+        android:text="公司"
+        android:textColor="@color/main_normal_color"
+        android:textSize="@dimen/text_size_13_sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_mobile"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:text="2021-1-30 12:00"
+        android:textColor="@color/order"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/y10"
+        android:text="手机"
+        android:textColor="@color/gray"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mobile"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/y10"
+        android:text="手机"
+        android:textColor="@color/gray"
+        android:textSize="12dp"
+        android:visibility="gone" />
+</RelativeLayout><!--</androidx.cardview.widget.CardView>-->

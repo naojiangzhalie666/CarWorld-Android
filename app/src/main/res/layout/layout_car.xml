@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:divider="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <com.lzj.sidebar.SideBarLayout
+            android:id="@+id/sidebar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:sidebarSelectTextColor="@color/order"
+            app:sidebarUnSelectTextColor="@color/gray"
+            app:sidebarSelectTextSize="20dp"
+            app:sidebarUnSelectTextSize="10dp"
+            app:sidebarWordBackground="@color/transparent"
+            app:sidebarWordTextColor="@color/order"
+            app:sidebarWordTextSize="50dp">
+        </com.lzj.sidebar.SideBarLayout>
+    </FrameLayout>

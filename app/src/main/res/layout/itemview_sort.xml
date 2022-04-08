@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_key"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:gravity="center_vertical"
+        android:background="#F7F7F7"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15_sp"
+        tools:text="B" />
+
+    <LinearLayout
+        android:id="@+id/llyt_brand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:id="@+id/iv_img"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x60"
+            android:layout_gravity="center"
+            android:src="@mipmap/header"
+            app:qmui_border_color="@color/white"
+            app:qmui_corner_radius="60dp" />
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_weight="1"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_13_sp"
+            tools:text="BMW" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/x30"
+            android:gravity="end|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新时间:2021-5-15"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_10_sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y6"
+                android:gravity="center"
+                android:text="已有信息数量：200"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_12_sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#F7F7F7" />
+</LinearLayout>

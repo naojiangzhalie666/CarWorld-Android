@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/item_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@drawable/shape_white_rect_10"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/x60"
+        android:paddingTop="@dimen/y20"
+        android:paddingEnd="@dimen/x60"
+        android:paddingBottom="@dimen/y30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="企业客服微信"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_15_sp" />
+
+        <ImageView
+            android:id="@+id/pop_img"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/x240"
+            android:src="@mipmap/ic_company_wx" />
+
+        <TextView
+            android:id="@+id/pop_btn"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/y60"
+            android:background="@drawable/shape_gradient_red"
+            android:gravity="center"
+            android:text="保存本地"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

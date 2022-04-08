@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:rightColor="@color/main_normal_color"
+    app:titleText="钱包">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="20dp"
+        android:background="@mipmap/bg_wallet"
+        android:paddingStart="@dimen/x30">
+
+        <TextView
+            android:id="@+id/tv_ye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="余额"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ye"
+            android:layout_marginTop="@dimen/y10"
+            android:text="--"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="提现金额："-->
+    <!--        android:textSize="15dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:textColor="@color/main_normal_deep_color"-->
+    <!--        />-->
+    <EditText
+        android:id="@+id/et_num"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:hint="请输入要提现的金额"
+        android:inputType="number"
+        android:textColor="@color/main_normal_deep_color"
+        android:textSize="@dimen/text_size_14_sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/main_pressed_color" />
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:hint="请输入支付宝账号"
+        android:textColor="@color/main_normal_deep_color"
+        android:textSize="@dimen/text_size_14_sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/main_pressed_color" />
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_dialog_red_button"
+        android:gravity="center"
+        android:text="提现"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="1.单笔提现金额不得低于10元。\n2.提现成功后客服将在7个工作日内转入支付宝账户。"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_12_sp" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

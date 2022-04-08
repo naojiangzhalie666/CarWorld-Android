@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:id="@+id/main"
+    >
+<!--    <com.qmuiteam.qmui.widget.QMUITopBar-->
+<!--        android:id="@+id/topbar"-->
+<!--        style="@style/GCTopBar2"-->
+<!--        app:qmui_topbar_left_back_drawable_id="@mipmap/icon_back"-->
+<!--        app:qmui_topbar_title_container_padding_horizontal="20dp"-->
+<!--        app:qmui_topbar_title_gravity="center" />-->
+    <include layout="@layout/layout_title_button"></include>
+    <com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bb_scale="0.37"
+        app:bl_centerScale="1.0"
+        app:bb_indicatorCornerRadius="2dp"
+        app:bb_indicatorHeight="1dp"
+        app:bb_indicatorWidth="10dp"
+        app:bb_delay="2"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/sp_px"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:arrowTint="@color/order"
+        app:textTint="@color/gray"
+        android:gravity="center"
+        app:dropDownListPaddingBottom="100dp" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/main_bg"
+        />
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/sp_city"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.3"
+        app:arrowTint="@color/order"
+        app:textTint="@color/gray"
+        app:dropDownListPaddingBottom="100dp" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/main_bg"
+        />
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/sp_citys"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:arrowTint="@color/order"
+        android:text="城市"
+        app:textTint="@color/gray"
+        app:dropDownListPaddingBottom="100dp" />
+</LinearLayout>
+
+    <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+        android:id="@+id/contentLayout"
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:recyclerBackgroundColor="@color/white"
+        app:recyclerScrollbarNone="true"
+        app:recyclerScrollbarStyle="outsideOverlay"
+        android:background="@color/white"
+        />
+
+</LinearLayout>

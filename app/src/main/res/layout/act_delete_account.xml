@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="账号注销">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y60"
+        android:layout_marginEnd="@dimen/x30"
+        android:text="账号注销后，与当前手机号关联的车无界台账号将被关闭，账号资料和用户个人信息将被清除。"
+        android:textColor="@color/main_normal_color" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y40"
+        android:text="注意:账号注销操作不可逆"
+        android:textColor="@color/order" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y40"
+        android:layout_marginEnd="@dimen/x30"
+        android:text="若您确定需要注销账号，请点击“联系客服”按钮,并自愿放弃您账号内的所有虚拟资产，收到申请后，客服将会在15个工作日内完成注销。"
+        android:textColor="@color/main_normal_color" />
+
+    <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+        android:id="@+id/btn_link"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/x60"
+        android:layout_marginTop="@dimen/y80"
+        android:textSize="@dimen/text_size_16_sp"
+        android:layout_marginEnd="@dimen/x60"
+        android:background="@drawable/shape_gradient_red"
+        android:text="联系客服"
+        android:textColor="@color/white" />
+</cn.droidlover.xdroid.views.appbar.ToolBar>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:layout_marginTop="@dimen/y20"
+        android:id="@+id/topbar"
+        style="@style/GCTopBar2"
+        app:qmui_topbar_title_container_padding_horizontal="20dp"
+        app:qmui_topbar_title_gravity="center" />
+
+    <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:recyclerBackgroundColor="@color/white"
+        app:recyclerScrollbarNone="true"
+        app:recyclerScrollbarStyle="outsideOverlay" />
+
+</LinearLayout>

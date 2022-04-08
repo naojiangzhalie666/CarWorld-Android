@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/toolbar"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="汽贸店认证">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y30">
+
+            <include layout="@layout/include_layout_id" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/y30"
+                android:drawablePadding="@dimen/x10"
+                android:text="公司信息"
+                android:textColor="@color/text_dark"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/shape_order" />
+
+            <LinearLayout
+                android:id="@+id/llyt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司名称："
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的公司全称"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <TextView
+                    android:id="@+id/et_company_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（例：XX有限公司）"
+                    android:textColor="@color/order"
+                    android:textSize="@dimen/text_size_12_sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/main_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司地址："
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@mipmap/icon_location"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_16_sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/main_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="@dimen/y20"
+                android:layout_marginEnd="@dimen/x30"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_yyzz"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_rz_yyzz" />
+
+                    <ImageView
+                        android:id="@+id/iv_yyzz_zt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ic_auth_shz"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y1"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_mt"
+                        android:layout_width="150dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/x20"
+                        android:layout_weight="1"
+                        android:src="@mipmap/icon_rz_mt" />
+
+                    <ImageView
+                        android:id="@+id/iv_mt_zt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ic_auth_shz"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_yyzz_bh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="@dimen/y10"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_13_sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@mipmap/icon_rz_btn"
+        android:gravity="center"
+        android:text="提交认证"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

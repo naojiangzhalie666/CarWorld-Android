@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 下拉放大图片 -->
+    <declare-styleable name="PullToZoomView">
+        <attr name="headerView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="zoomView" format="reference" />
+        <attr name="isHeaderParallax" format="boolean" />
+    </declare-styleable>
+
+    <!-- 标题栏样式 -->
+    <!-- Base application theme. -->
+    <declare-styleable name="ToolBar">
+        <!-- 左按钮是否可见|背景 -->
+        <attr name="leftSrc" format="reference|color" />
+        <!-- 左文本内容 -->
+        <attr name="leftText" format="string" />
+        <attr name="leftColor" format="color" />
+        <attr name="leftSize" format="dimension" />
+        <!-- 标题文本内容 -->
+        <attr name="titleText" format="string" />
+        <attr name="titleBold" format="boolean" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+        <!-- 标题文本内容 -->
+        <attr name="subTitleColor" format="color" />
+        <attr name="subTitleSize" format="dimension" />
+        <!-- 右文本内容 -->
+        <attr name="rightColor" format="color" />
+        <attr name="rightSize" format="dimension" />
+        <!-- 背景 -->
+        <attr name="barBackground" format="reference|color" />
+        <!-- appbar高度 -->
+        <attr name="barHeight" format="dimension" />
+        <!-- divider 颜色 -->
+        <attr name="bottomDivider" format="color" />
+        <attr name="bottomDividerHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- 左右控件 -->
+    <declare-styleable name="LeftRightLayout">
+        <attr name="iconImg" format="reference" />
+        <attr name="leftTxt" format="string" />
+        <attr name="leftTxtColor" format="color" />
+        <attr name="leftTxtSize" format="dimension" />
+        <attr name="rightTxt" format="string" />
+        <attr name="rightTxtColor" format="color" />
+        <attr name="rightTxtSize" format="dimension" />
+        <attr name="leftRightEnabled" format="boolean" />
+        <attr name="enabledColor" format="color" />
+        <attr name="arrow" format="reference" />
+    </declare-styleable>
+
+    <!-- 有说明的EditText控件 -->
+    <declare-styleable name="ExplainEditField">
+        <attr name="labelDuration" format="integer" />
+        <attr name="labelColor" format="color" />
+        <attr name="labelTxt" format="string" />
+    </declare-styleable>
+
+    <!-- 有清除按钮EditText控件 -->
+    <declare-styleable name="ClearEditText">
+        <attr name="isShow" format="boolean" />
+    </declare-styleable>
+
+    <!-- SwitchButton -->
+    <declare-styleable name="SwitchButton">
+        <attr name="hasShadow" format="boolean" />
+        <attr name="primaryColor" format="color" />
+        <attr name="primaryColorDark" format="color" />
+        <attr name="isOpened" format="boolean" />
+    </declare-styleable>
+    <!-- 密码输入键盘 -->
+    <declare-styleable name="PwdInputController">
+        <attr name="lineColor" format="color|reference" />
+        <attr name="inputCount" format="integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+</resources>

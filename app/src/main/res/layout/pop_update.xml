@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/update_rl"
+        android:layout_width="@dimen/x480"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/update_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_update_bg" />
+
+        <TextView
+            android:id="@+id/update_t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginTop="@dimen/y100"
+            android:text="发现新版本"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/update_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_t1"
+            android:layout_marginStart="@dimen/x30"
+            android:text="V1.1.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15_sp" />
+
+        <LinearLayout
+            android:layout_width="@dimen/x500"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_img"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/x20"
+            android:paddingTop="@dimen/y30"
+            android:paddingEnd="@dimen/x20"
+            android:paddingBottom="@dimen/y30">
+
+            <TextView
+                android:id="@+id/update_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/y16"
+                android:text=""
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_14_sp" />
+
+            <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y30"
+                android:background="@mipmap/ic_update_btn"
+                android:gravity="center"
+                android:text="立即升级"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18_sp" />
+
+            <LinearLayout
+                android:id="@+id/update_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/update_rl"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y30"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y100">
+
+                    <me.wangyuwei.loadingview.LoadingView
+                        android:id="@+id/loading_view"
+                        android:layout_width="@dimen/x120"
+                        android:layout_height="@dimen/x120"
+                        android:layout_centerHorizontal="true"
+                        app:lv_duration="5"
+                        app:lv_end_color="#80d0ff"
+                        app:lv_external_radius="@dimen/x40"
+                        app:lv_internal_radius="@dimen/x5"
+                        app:lv_start_color="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/update_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0%"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/text_size_12_sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/update_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_white_close"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/update_rl" />
+
+</RelativeLayout>

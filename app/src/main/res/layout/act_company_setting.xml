@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="公司管理">
+
+    <cn.droidlover.xdroid.views.LeftRightLayout
+        android:id="@+id/setting_update"
+        style="@style/left_right"
+        app:arrow="@mipmap/icon_right"
+        app:iconImg="@mipmap/icon_gs"
+        app:leftTxt="资料修改" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/line_grey" />
+
+    <cn.droidlover.xdroid.views.LeftRightLayout
+        android:visibility="gone"
+        android:id="@+id/setting_change"
+        style="@style/left_right"
+        app:arrow="@mipmap/icon_right"
+        app:iconImg="@mipmap/icon_gs"
+        app:leftTxt="公司切换" />
+
+
+    <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+        android:id="@+id/btn_exit"
+        android:layout_width="@dimen/x240"
+        android:layout_height="@dimen/y70"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y60"
+        android:background="@drawable/shape_gradient_red"
+        android:text="退出公司"
+        android:visibility="gone"
+        android:textColor="@color/white" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

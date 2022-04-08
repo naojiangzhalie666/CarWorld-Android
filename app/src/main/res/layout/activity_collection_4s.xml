@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <com.xuexiang.xui.widget.spinner.DropDownMenu
+        android:id="@+id/ddm_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:ddm_dividerColor="@color/main_bg"
+        app:ddm_dividerWidth="1dp"
+        app:ddm_menuBackgroundColor="@color/white"
+        app:ddm_menuSelectedIcon="@mipmap/icon_px_down"
+        app:ddm_menuTextSelectedColor="@color/order"
+        app:ddm_menuTextUnselectedColor="@color/main_normal_color"
+        app:ddm_menuUnselectedIcon="@mipmap/icon_px_up" />
+
+    <cn.droidlover.xrecyclerview.XRecyclerContentLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingTop="5dp"
+        app:recyclerBackgroundColor="@color/white"
+        app:recyclerScrollbarNone="true"
+        app:recyclerScrollbarStyle="outsideOverlay" />
+
+</LinearLayout>

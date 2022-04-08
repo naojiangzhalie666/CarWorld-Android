@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="实名认证">
+
+    <TextView
+        android:background="@color/main_bg"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_12_sp"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingTop="@dimen/y10"
+        android:paddingBottom="@dimen/y10"
+        android:layout_width="match_parent"
+        android:text="为保证交易真实性，防止网络骗子，为此在本平台发布交易必须使用您的真实身份，敬请知晓！"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/id_auth_z"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x90"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginEnd="@dimen/x90"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_auth_id_card_z" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:drawablePadding="@dimen/x10"
+        android:text="人像面"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/id_auth_f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x90"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x90"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_auth_id_card_f" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:drawablePadding="@dimen/x10"
+        android:text="国徽面"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@mipmap/icon_rz_btn"
+        android:gravity="center"
+        android:text="提交认证"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_17_sp"
+        android:textStyle="bold" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

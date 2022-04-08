@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/x20"
+    android:paddingTop="@dimen/y10"
+    android:paddingEnd="@dimen/x20"
+    android:paddingBottom="@dimen/y10">
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/iv_img"
+        android:layout_width="@dimen/x220"
+        android:layout_height="@dimen/y150"
+        android:src="@mipmap/bg_login"
+        app:qmui_border_color="@color/white"
+        app:qmui_corner_radius="10dp" />
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_toEndOf="@id/iv_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_car"
+            android:layout_width="@dimen/x430"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/main_normal_color"
+            android:textSize="@dimen/text_size_13_sp" />
+
+        <TextView
+            android:id="@+id/tv_nf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_10_sp" />
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y2"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_10_sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="批发价："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+
+            <TextView
+                android:id="@+id/tv_jg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_13_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="零售价："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_13_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recover"
+        android:layout_width="@dimen/x120"
+        android:layout_height="@dimen/y50"
+        android:layout_below="@id/tv_delete"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_marginEnd="@dimen/x20"
+        android:background="@drawable/shape_gradient_blue"
+        android:gravity="center"
+        android:text="恢复"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_13_sp" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="@dimen/x120"
+        android:layout_height="@dimen/y50"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/y50"
+        android:layout_marginEnd="@dimen/x20"
+        android:background="@drawable/shape_gradient_red"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_13_sp" />
+
+</RelativeLayout>

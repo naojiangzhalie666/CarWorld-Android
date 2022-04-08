@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="发布车友圈">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="选择车源:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="历史发布"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y300"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="@dimen/y30"
+                android:layout_marginEnd="@dimen/x30"
+                android:background="@drawable/shape_circle_bg">
+
+                <EditText
+                    android:id="@+id/input_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="start"
+                    android:hint="这一刻的批发"
+                    android:lines="4"
+                    android:maxLength="100"
+                    android:padding="@dimen/x20"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/text_size_13_sp" />
+
+                <TextView
+                    android:id="@+id/input_content_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/x20"
+                    android:layout_marginStart="@dimen/x10"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:layout_marginBottom="@dimen/x10"
+                    android:text="0/100" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:layout_marginEnd="@dimen/x20"
+                android:layout_marginBottom="@dimen/y20" />
+
+            <include layout="@layout/layout_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="批发价:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_sale_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="1234567890."
+                    android:gravity="center_vertical|end"
+                    android:hint="请输入批发价格"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingEnd="@dimen/x10"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x30"
+                    android:text="万元:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+
+                <CheckBox
+                    android:id="@+id/ck_yj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/x30"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/button_normal_checkbox"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center"
+                    android:text="可议价"
+                    android:textColor="@color/order"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+                <CheckBox
+                    android:id="@+id/ck_dj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:button="@null"
+                    android:drawableTop="@drawable/button_normal_checkbox"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center"
+                    android:text="底价"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_size_14_sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_view" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="选择地区:"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:gravity="center_vertical|end"
+                    android:hint="请选择地区"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/shape_order"
+                android:drawablePadding="@dimen/x10"
+                android:text="重要事项"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_15_sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:lineHeight="20dp"
+                android:text="
+    1、请确保发布的批发车源真实有效可控，如已出售，须及时下架\n
+    2、批发车源的价格必填,且不宜高于市场价格。\n
+    3、车源图片和描述内容必须真实，负责任。\n
+    4、可以直接从【历史发布】选择车源进行发布。\n
+    5、涉及车辆交易，请确认活整车况和交易手续，建议走平台和定金保障，以保障定价或车款安全。"
+                android:textColor="@color/color_666"
+                android:textSize="@dimen/text_size_12_sp" />
+
+
+            <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+                android:id="@+id/btn_go"
+                android:layout_width="@dimen/x640"
+                android:layout_height="@dimen/y80"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/y50"
+                android:layout_marginBottom="@dimen/y40"
+                android:background="@drawable/shape_gradient_red"
+                android:text="发布"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</cn.droidlover.xdroid.views.appbar.ToolBar>

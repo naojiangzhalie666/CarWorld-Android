@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_marginEnd="@dimen/x30"
+        android:background="@drawable/shape_white_rect_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="@dimen/x240"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_city"
+                android:layout_width="wrap_content"
+                android:paddingTop="@dimen/y4"
+                android:paddingBottom="@dimen/y4"
+                android:paddingStart="@dimen/x20"
+                android:paddingEnd="@dimen/x20"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_button_red"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <TextView
+                android:id="@+id/item_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:text=""
+                android:lines="3"
+                android:lineSpacingExtra="@dimen/y6"
+                android:textSize="@dimen/text_size_12_sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:text=">>>加盟成为合作商获得专属推广码"
+                android:textColor="@color/order"
+                android:textSize="@dimen/text_size_12_sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

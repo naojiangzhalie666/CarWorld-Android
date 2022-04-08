@@ -1,0 +1,7 @@
+include ':library'
+include ':app'
+//include ':tuikit'
+rootProject.name='CarWorld'
+include ':ocr_ui'
+include ':faceplatform-ui'
+include ':faceplatform-release'

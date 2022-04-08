@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/y20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:layout_marginStart="@dimen/x70"
+            android:layout_marginEnd="@dimen/x70"
+            android:background="@drawable/shape_white_rect_45"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车架号"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <EditText
+                android:id="@+id/search_vin_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:digits="@string/ban_chinese"
+                android:hint="请输入车架号"
+                android:maxLength="20"
+                android:paddingStart="@dimen/x20"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <ImageView
+                android:id="@+id/search_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x10"
+                android:src="@mipmap/icon_scan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x70"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_marginEnd="@dimen/x70"
+            android:background="@drawable/shape_white_rect_10"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
+            android:paddingBottom="@dimen/y10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/y10"
+                    android:text="请上传行驶证"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_13_sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x10"
+                    android:text="(必传)"
+                    android:textColor="@color/order"
+                    android:textSize="@dimen/text_size_13_sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="@dimen/x110"
+                android:layout_height="@dimen/x110"
+                android:layout_marginTop="@dimen/y20"
+                android:src="@mipmap/icon_ml_add" />
+
+            <LinearLayout
+                android:id="@+id/search_all_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Switch
+                    android:id="@+id/search_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y20"
+                    android:checked="false"
+                    android:text="综合查询"
+                    android:textColor="@color/main_normal_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="维保记录+碰撞记录"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12_sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y10"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/x66">
+
+            <CheckBox
+                android:id="@+id/search_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="已阅读并同意"
+                android:textSize="@dimen/text_size_13_sp" />
+
+            <TextView
+                android:id="@+id/search_regular_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《查询服务协议》"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="@dimen/text_size_13_sp" />
+        </LinearLayout>
+
+        <cn.droidlover.xdroid.views.textView.NoDoubleClickButton
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y60"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y20"
+            android:background="@drawable/shape_gradient_red"
+            android:text="查询"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/x80"
+            android:paddingEnd="@dimen/x80">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:drawablePadding="@dimen/x10"
+                android:text="报告说明"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_15_sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/shape_order" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="1 、查询服务：车无界拥有查询VIN信息版块，维保查询 11 元／条，碰撞查询 19 元／条。
+\n\n2 、查询分类：维保记录分为普通品牌，特殊品牌,人工品牌询，由于上游费用不同，可能造成价格有所不同。"
+                android:textSize="@dimen/text_size_11_sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="板车选择">
+
+    <LinearLayout
+        android:id="@+id/car_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/y20"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/y20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_car_small" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小板车"
+                android:textColor="@color/main_normal_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="载重：3吨"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="底盘高》0.2m"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="长宽高：6*3*2.5m       "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/line_grey" />
+
+    <LinearLayout
+        android:id="@+id/car_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/y20"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/y20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_car_big" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大板车"
+                android:textColor="@color/main_normal_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="载重：25吨"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="底盘高》0.9m"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="长宽高：9.6*2.3*2.7m"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_10_sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/line_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_rect_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/y20"
+            android:paddingBottom="@dimen/y20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_show_logo"
+                android:drawablePadding="@dimen/y10"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/main_normal_color" />
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="match_parent"
+                android:background="@color/line_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="中国人保财险"
+                android:textColor="@color/main_normal_color"
+                android:textSize="@dimen/text_size_16_sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="@dimen/x110"
+                android:layout_height="@dimen/y74"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_car_zgrb" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/line_grey" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/insurance_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x20">
+
+                <TextView
+                    android:id="@+id/t_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="救援车货运险方案①（小板）"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_13_sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t_1"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="保费 2000/年"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+
+                <TextView
+                    android:id="@+id/btn_1"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="@dimen/y44"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_gradient_red"
+                    android:gravity="center"
+                    android:text="点击查看"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x20">
+
+                <TextView
+                    android:id="@+id/t_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="救援车货运险方案②（小板）"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_13_sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t_2"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="保费 4000/年"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+
+                <TextView
+                    android:id="@+id/btn_2"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="@dimen/y44"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_gradient_red"
+                    android:gravity="center"
+                    android:text="点击查看"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="@color/line_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x20">
+
+                <TextView
+                    android:id="@+id/t_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="轿运车货运险方案（大板）"
+                    android:textColor="@color/main_normal_color"
+                    android:textSize="@dimen/text_size_13_sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t_3"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="保费 4000/年"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_12_sp" />
+
+                <TextView
+                    android:id="@+id/btn_3"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="@dimen/y44"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_gradient_red"
+                    android:gravity="center"
+                    android:text="点击查看"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12_sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>

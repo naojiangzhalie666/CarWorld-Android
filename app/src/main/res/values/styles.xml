@@ -1,0 +1,239 @@
+<resources>
+
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--        <item name="android:typeface">serif</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyAppTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <!--    &lt;!&ndash; 并添加自己的 style &ndash;&gt;-->
+    <style name="GCTopBar" parent="QMUI.TopBar">
+        <item name="android:background">@color/maincolor</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/qmui_topbar_height</item>
+        <item name="qmui_topbar_title_color">@color/white</item>
+    </style>
+
+    <style name="GCTopBar2" parent="QMUI.TopBar">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/qmui_topbar_height</item>
+        <item name="qmui_topbar_title_color">@color/main_normal_deep_color</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/order</item>
+        <item name="colorControlActivated">@color/order</item>
+    </style>
+
+    <style name="MyWhiteCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/main_white_bg_color_deep</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorPrimary">@color/order</item>
+        <item name="android:colorPrimaryDark">@color/order</item>
+        <item name="android:colorAccent">@color/order</item>
+    </style>
+
+    <style name="SwitchButtonStyleMD" parent="SwitchButtonMD">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="MyDialog" parent="android:Theme.Material.Light.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--    <style name="CustomTheme" parent="DefaultCityPickerTheme">-->
+    <!--        <item name="cpCancelTextColor">@color/gray</item>-->
+    <!--        <item name="cpSearchCursorDrawable">@color/gray</item>-->
+    <!--        <item name="cpIndexBarNormalTextColor">@color/gray</item>-->
+    <!--        <item name="cpIndexBarSelectedTextColor">@color/gray</item>-->
+    <!--        <item name="cpSectionHeight">30dp</item>-->
+    <!--        <item name="cpOverlayBackground">@color/white</item>-->
+    <!--    </style>-->
+    <!--    <style name="GCTopBarBack" parent="QMUI.TopBar">-->
+    <!--        <item name="android:background">@color/maincolor</item>-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">?attr/qmui_topbar_height</item>-->
+    <!--        <item name="qmui_topbar_title_color">@color/white</item>-->
+    <!--        <item name="qmui_topbar_left_back_drawable_id">@mipmap/icon_back</item>-->
+    <!--        <item name="qmui_topbar_image_btn_height">30dp</item>-->
+    <!--        <item name="qmui_topbar_image_btn_width">30dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="QDialog" parent="QMUI.Dialog"></style>-->
+    <!--    <style name="BannerDefaultStyle">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">140dp</item>-->
+    <!--        <item name="android:layout_marginTop">0dp</item>-->
+    <!--        &lt;!&ndash; 自定义属性在styles.xml中不需要命名空间,直接用属性名就可以了 &ndash;&gt;-->
+    <!--        &lt;!&ndash; 开启自动轮播 &ndash;&gt;-->
+    <!--        <item name="banner_pointAutoPlayAble">true</item>-->
+    <!--        &lt;!&ndash; 自动轮播的时间间隔 &ndash;&gt;-->
+    <!--        <item name="banner_pointAutoPlayInterval">3000</item>-->
+    <!--        &lt;!&ndash; 指示点容器背景 &ndash;&gt;-->
+    <!--        <item name="banner_pointContainerBackground">@color/transparent</item>-->
+    <!--        &lt;!&ndash; 指示点背景 &ndash;&gt;-->
+    <!--        <item name="banner_pointDrawable">@drawable/point_selector</item>-->
+    <!--        &lt;!&ndash; 指示点容器左右内间距 &ndash;&gt;-->
+    <!--        <item name="banner_pointContainerLeftRightPadding">10dp</item>-->
+    <!--        &lt;!&ndash; 指示点上下外间距 &ndash;&gt;-->
+    <!--        <item name="banner_pointTopBottomMargin">6dp</item>-->
+    <!--        &lt;!&ndash; 指示点左右外间距 &ndash;&gt;-->
+    <!--        <item name="banner_pointLeftRightMargin">3dp</item>-->
+    <!--        &lt;!&ndash; 指示器的位置 &ndash;&gt;-->
+    <!--        <item name="banner_indicatorGravity">bottom|center_horizontal</item>-->
+    <!--        &lt;!&ndash; 页码切换过程的时间长度 &ndash;&gt;-->
+    <!--        <item name="banner_pageChangeDuration">1000</item>-->
+    <!--        &lt;!&ndash; 提示文案的文字大小 &ndash;&gt;-->
+    <!--        <item name="banner_tipTextSize">10sp</item>-->
+    <!--        &lt;!&ndash; 提示文案的文字颜色 &ndash;&gt;-->
+    <!--        <item name="banner_tipTextColor">@android:color/white</item>-->
+    <!--        &lt;!&ndash; 加载网络数据时覆盖在BGABanner最上层的占位图 &ndash;&gt;-->
+    <!--    </style>-->
+
+    <!--    <style name="AutoWrapTv" parent="AutoWrap">-->
+    <!--        <item name="android:textSize">10sp</item>-->
+    <!--        <item name="android:textColor">@android:color/white</item>-->
+    <!--        <item name="android:gravity">center</item>-->
+    <!--        <item name="android:background">@drawable/selector_btn_test</item>-->
+    <!--        <item name="android:layout_margin">4dp</item>-->
+    <!--        <item name="android:onClick">onClick</item>-->
+    <!--        <item name="android:paddingLeft">4dp</item>-->
+    <!--        <item name="android:paddingRight">4dp</item>-->
+    <!--        <item name="android:paddingTop">8dp</item>-->
+    <!--        <item name="android:paddingBottom">8dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="mineItemStyle">-->
+    <!--        <item name="android:background">@drawable/mine_item_selecetor</item>-->
+    <!--        <item name="android:paddingLeft">20dp</item>-->
+    <!--        <item name="android:paddingRight">20dp</item>-->
+    <!--        <item name="android:gravity">center_vertical</item>-->
+    <!--        <item name="android:layout_width">fill_parent</item>-->
+    <!--        <item name="android:layout_height">45dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="mineItemText">-->
+    <!--        <item name="android:textSize">15sp</item>-->
+    <!--        <item name="android:drawablePadding">10dp</item>-->
+    <!--        <item name="android:textColor">@color/black</item>-->
+    <!--        <item name="android:layout_centerVertical">true</item>-->
+    <!--        <item name="android:gravity">center_vertical</item>-->
+    <!--    </style>-->
+    <!--    <style name="mineItemImage">-->
+    <!--        <item name="android:layout_marginRight">0dp</item>-->
+    <!--        <item name="android:background">@mipmap/ic_right</item>-->
+    <!--        <item name="android:layout_centerVertical">true</item>-->
+    <!--        <item name="android:layout_alignParentRight">true</item>-->
+    <!--    </style>-->
+    <!--    <style name="backbtnstyle">-->
+    <!--        <item name="android:layout_width">wrap_content</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:drawableLeft">@mipmap/icon_back</item>-->
+    <!--        <item name="android:layout_centerVertical">true</item>-->
+    <!--        <item name="android:paddingLeft">15dp</item>-->
+    <!--        <item name="android:drawablePadding">5dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="LinearLayoutItemStyle">-->
+    <!--        <item name="android:background">@android:color/white</item>-->
+    <!--        <item name="android:paddingLeft">15dp</item>-->
+    <!--        <item name="android:gravity">center</item>-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">40dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="llyt_left_right">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:background">@color/white</item>-->
+    <!--        <item name="android:orientation">horizontal</item>-->
+    <!--        <item name="android:paddingBottom">2dp</item>-->
+    <!--        <item name="android:paddingTop">2dp</item>-->
+    <!--        <item name="android:paddingLeft">10dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="llyt_pay">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">50dp</item>-->
+    <!--        <item name="android:background">@drawable/pay_selector</item>-->
+    <!--        <item name="android:orientation">horizontal</item>-->
+    <!--        <item name="android:gravity">center_vertical</item>-->
+    <!--        <item name="android:padding">10dp</item>-->
+    <!--        <item name="android:layout_marginLeft">10dp</item>-->
+    <!--        <item name="android:layout_marginTop">10dp</item>-->
+    <!--        <item name="android:layout_marginRight">10dp</item>-->
+    <!--    </style>-->
+    <!--    <style name="horizontal_line">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">0.5dp</item>-->
+    <!--        <item name="android:background">@color/main_white_bg_color_deep</item>-->
+    <!--    </style>-->
+    <!--    <style name="DialogWindowStyle_Shop_bg" parent="@android:style/Theme.Dialog">-->
+    <!--        <item name="android:windowIsFloating">true</item>-->
+    <!--        <item name="android:windowIsTranslucent">true</item>-->
+    <!--        &lt;!&ndash; 是否浮在activity之上 &ndash;&gt;-->
+    <!--        <item name="android:windowNoTitle">true</item>-->
+    <!--        &lt;!&ndash; 无标题 &ndash;&gt;-->
+    <!--        <item name="android:backgroundDimEnabled"> &lt;!&ndash; 设置阴影浮动框 &ndash;&gt;-->
+    <!--            true-->
+    <!--        </item>-->
+    <!--        &lt;!&ndash; 模糊 &ndash;&gt;-->
+    <!--        <item name="android:windowFrame">-->
+    <!--            @null-->
+    <!--        </item>-->
+    <!--    </style>-->
+    <!--    <style name="DialogWindowStyle">-->
+    <!--        <item name="android:windowEnterAnimation">@anim/modal_in</item>-->
+    <!--        <item name="android:windowExitAnimation">@anim/modal_out</item>-->
+    <!--    </style>-->
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light"></style>
+
+    <!-- Application theme. -->
+    <style name="AppThemeSpace" parent="AppBaseTheme">
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="left_right">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y90</item>
+        <item name="android:paddingEnd">@dimen/x30</item>
+        <item name="android:paddingStart">@dimen/x30</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MyTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_13_sp</item>
+    </style>
+
+    <style name="order_pop" parent="Base.Theme.NoActionBar">
+        <item name="android:windowBackground">#00000000</item> <!-- 背景色透明度 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明,设置为false无透明效果 -->
+    </style>
+</resources>

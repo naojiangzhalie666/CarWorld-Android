@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.droidlover.xdroid.views.appbar.ToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:leftSrc="@drawable/icon_back2"
+    app:titleColor="@color/text_dark"
+    app:titleText="标识认证">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/x8"
+            android:layout_height="@dimen/y30"
+            android:background="@color/text_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10"
+            android:text="汽贸店认证"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_16_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sign_auth_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x30"
+            android:text="（已上传）"
+            android:textColor="@color/order"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x60"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x60">
+
+        <ImageView
+            android:id="@+id/sign_auth_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x60"
+            android:src="@mipmap/ic_auth_qm" />
+
+
+        <TextView
+            android:id="@+id/sign_auth_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_toEndOf="@id/sign_auth_img1"
+            android:text="主营二手车，顺带新车" />
+
+        <TextView
+            android:id="@+id/sign_auth_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_below="@id/sign_auth_txt2"
+            android:layout_toEndOf="@id/sign_auth_img1"
+            android:text="主营新车，顺带二手车" />
+
+        <Switch
+            android:id="@+id/sign_auth_ck2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/y10"
+            android:checked="false"
+            android:visibility="invisible" />
+
+        <Switch
+            android:id="@+id/sign_auth_ck1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/sign_auth_ck2"
+            android:layout_marginTop="@dimen/y10"
+            android:checked="false"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/x8"
+            android:layout_height="@dimen/y30"
+            android:background="@color/text_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10"
+            android:text="物流认证"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_16_sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/sign_auth_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x30"
+            android:text="（已上传）"
+            android:textColor="@color/order"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x60"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x60">
+
+        <ImageView
+            android:id="@+id/sign_auth_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x60"
+            android:src="@mipmap/ic_auth_sj" />
+
+        <TextView
+            android:id="@+id/sign_auth_txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/sign_auth_img2"
+            android:text="物流司机" />
+
+        <Switch
+            android:id="@+id/sign_auth_ck3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/y20"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x60"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x60">
+
+        <ImageView
+            android:id="@+id/sign_auth_img5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x60"
+            android:src="@mipmap/ic_auth_dd" />
+
+        <TextView
+            android:id="@+id/sign_auth_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/sign_auth_img5"
+            android:text="物流调度\n(可接单，可分配订单给下属司机)" />
+
+        <Switch
+            android:id="@+id/sign_auth_ck5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/y20"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/y60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/x8"
+            android:layout_height="@dimen/y30"
+            android:background="@color/text_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10"
+            android:text="4S店二网认证"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_16_sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/sign_auth_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x30"
+            android:text="（已上传）"
+            android:textColor="@color/order"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x40"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x60">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x60"
+            android:src="@mipmap/ic_auth_4s" />
+
+        <Switch
+            android:id="@+id/sign_auth_ck4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/y20"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <cn.droidlover.xdroid.views.textView.NoDoubleClickTextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:background="@mipmap/icon_rz_btn"
+        android:gravity="center"
+        android:text="提交认证"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16_sp"
+        android:textStyle="bold" />
+
+</cn.droidlover.xdroid.views.appbar.ToolBar>
