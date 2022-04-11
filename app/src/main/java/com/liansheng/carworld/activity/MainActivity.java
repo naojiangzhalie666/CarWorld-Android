@@ -75,11 +75,11 @@ public class MainActivity extends BaseActivity {
     @Titles
     private static final String[] mTitles = {"二手车", "车友圈", " ", "我的公司", "我的"};
     @SeleIcons
-    private static final int[] mSeleIcons = {R.mipmap.icon_home_s, R.mipmap.icon_message_s,
+    private static final int[] mSeleIcons = {R.mipmap.icon_home_s, R.mipmap.icon_circle_s,
             R.color.transparent,
             R.mipmap.icon_company_s, R.mipmap.icon_me_s};
     @NorIcons
-    private static final int[] mNormalIcons = {R.mipmap.icon_home, R.mipmap.icon_message,
+    private static final int[] mNormalIcons = {R.mipmap.icon_home, R.mipmap.icon_circle,
             R.color.transparent,
             R.mipmap.icon_company, R.mipmap.icon_me};
 

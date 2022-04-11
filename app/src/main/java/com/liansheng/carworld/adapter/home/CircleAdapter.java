@@ -92,12 +92,14 @@ public class CircleAdapter extends BaseQuickAdapter<CircleBean, BaseViewHolder> 
         holder.setGone(R.id.item_circle_company_name, true);
         holder.setGone(R.id.item_circle_company,true);
         holder.setText(R.id.item_circle_name, "");
-        Glide.with(ContextHolder.getContext()).load(R.mipmap.header)
+        Glide.with(ContextHolder.getContext()).load(R.mipmap.logo)
                 .into((ImageView) holder.getView(R.id.item_circle_header));
         if (item.getUser() != null) {
             holder.setText(R.id.item_circle_name, item.getUser().getName());
-            Glide.with(ContextHolder.getContext()).load(UrlKit.getImgUrl(item.getUser().getPhoto()))
-                    .into((ImageView) holder.getView(R.id.item_circle_header));
+            if(item.getUser().getPhoto() != null) {
+                Glide.with(ContextHolder.getContext()).load(UrlKit.getImgUrl(item.getUser().getPhoto()))
+                        .into((ImageView) holder.getView(R.id.item_circle_header));
+            }
             if (!TextUtils.isEmpty(item.getUser().getCompany())) {
                 holder.setText(R.id.item_circle_company_name, item.getUser().getCompany());
                 holder.setGone(R.id.item_circle_company_name, false);
